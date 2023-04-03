@@ -254,6 +254,30 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             }
         }
 
+        //===================================================Edits Start============================================================
+        public void HandChange()
+        {
+            UpdateLocomotionActions();
+            UpdateTurnActions();
+        }
+
+        public void CancelTeleportationMovement()
+        {
+            m_Teleporting = false;
+            m_SmoothMotionEnabled = true;
+            Debug.Log("Canceling Teleportation");
+        }
+
+        public void CancelContinuousMovement()
+        {
+            m_Teleporting = true;
+            m_SmoothMotionEnabled = false;
+            Debug.Log("Canceling ContinuousMotion");
+
+        }
+
+        //===================================================Edit End=========================================================
+
         protected void OnEnable()
         {
             if (m_TeleportInteractor != null)
