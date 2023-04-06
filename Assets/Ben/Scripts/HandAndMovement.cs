@@ -41,14 +41,14 @@ public class HandAndMovement : MonoBehaviour
         {
             leftHandControllerManager.smoothMotionEnabled = true;
             rightHandControllerManager.smoothMotionEnabled = false;
-            leftHandControllerManager.CancelTeleportationMovement();
+            //leftHandControllerManager.CancelTeleportationMovement();
 
         }
         else if (righttHandUser)
         {
             rightHandControllerManager.smoothMotionEnabled = true;
             leftHandControllerManager.smoothMotionEnabled = false;
-            rightHandControllerManager.CancelTeleportationMovement();
+            //rightHandControllerManager.CancelTeleportationMovement();
 
         }
     }
