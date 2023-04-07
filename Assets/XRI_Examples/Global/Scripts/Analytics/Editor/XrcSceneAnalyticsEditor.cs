@@ -34,7 +34,7 @@ namespace UnityEditor.XR.Content.Interaction.Analytics
 
                 //var monoBehaviours = sceneAnalytics.GetComponentsInChildren<MonoBehaviour>();
                 //foreach (var monoBehaviour in monoBehaviours)
-                   // ValidateObjectReferences(monoBehaviour);
+                    //ValidateObjectReferences(monoBehaviour);
             }
         }
     }
