@@ -12,14 +12,14 @@ public class XRRigStatus : MonoBehaviour
     [SerializeField]
     private bool teleportationOpted;
     [SerializeField]
-    private TeleportationArea hospitalTeleportArea;
+    private TeleportationArea sceneTeleportArea;
     [SerializeField]
     public CheckXRRigStatus xRRigStatus;
 
 
     private void Awake()
     {
-        hospitalTeleportArea = GameObject.FindObjectOfType<TeleportationArea>();
+        sceneTeleportArea = GameObject.FindObjectOfType<TeleportationArea>();
         xRRigStatus = GameObject.FindObjectOfType<CheckXRRigStatus>();
         Debug.Log("New Scene Loaded");
     }
@@ -29,16 +29,18 @@ public class XRRigStatus : MonoBehaviour
         ActivateOrDeactiveteTeleportArea();
     }
 
-
+    /// <summary>
+    /// Method to enable or disable teleportation area in the scene.
+    /// </summary>
     public void ActivateOrDeactiveteTeleportArea()
     {
         if (xRRigStatus.teleportMovementStatus)
         {
-            hospitalTeleportArea.enabled = true;
+            sceneTeleportArea.enabled = true;
         }
         else if (!xRRigStatus.teleportMovementStatus)
         {
-            hospitalTeleportArea.enabled = false;
+            sceneTeleportArea.enabled = false;
         }
     }
 }

@@ -13,10 +13,6 @@ public class TeleportationStatus : MonoBehaviour
 {
     public CheckXRRigStatus rigStatus;
 
-    private void Awake()
-    {
-        
-    }
     private void Start()
     {
         if (rigStatus.teleportMovementStatus)
