@@ -1,13 +1,9 @@
 using TMPro;
 using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
-
-namespace UnityEngine.XR.Content.Interaction
-{
-    /// <summary>
-    /// Use this class to present locomotion control schemes and configuration preferences,
-    /// and respond to player input in the UI to set them.
-    /// </summary>
-    /// <seealso cref="LocomotionManager"/>
+using UnityEngine.XR.Content.Interaction;
+using UnityEngine;
+//namespace UnityEngine.XR.Content.Interaction
+//{
     public class SampleButtonPress : MonoBehaviour
     {
 
@@ -15,6 +11,9 @@ namespace UnityEngine.XR.Content.Interaction
         [SerializeField]
         [Tooltip("Stores the button toggle used to enable comfort mode.")]
         XRPushButton m_ComfortModeToggle;
+
+        [SerializeField]
+        TextMeshPro switchStatus;
 
         public bool pushButtonReady;
 
@@ -36,7 +35,7 @@ namespace UnityEngine.XR.Content.Interaction
         void InitializeControls()
         {
 
-            m_ComfortModeToggle.toggleValue = pushButtonReady;//(m_Manager.enableComfortMode);
+            m_ComfortModeToggle.toggleValue = pushButtonReady;
 
         }
 
@@ -55,13 +54,16 @@ namespace UnityEngine.XR.Content.Interaction
         void EnableComfort()
         {
             pushButtonReady = true;
+            switchStatus.text = m_ComfortModeToggle.value.ToString();
         }
 
         void DisableComfort()
         {
             pushButtonReady = false;
+            switchStatus.text = m_ComfortModeToggle.value.ToString();
+
         }
 
     }
-}
+//}
 
