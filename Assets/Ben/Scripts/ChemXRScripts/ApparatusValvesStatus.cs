@@ -9,6 +9,7 @@ public class ApparatusValvesStatus : MonoBehaviour
     public XRPushButton[] pushButtonStatus;
     public XRLever[] leverStatus;
 
+
     [SerializeField]
     private List<bool> leversBoolValue;
     [SerializeField]
@@ -20,7 +21,7 @@ public class ApparatusValvesStatus : MonoBehaviour
     }
     private void Update()
     {
-        //LeverStatus();
+        LeverStatus();
     }
 
     public void LeverStatus()
@@ -31,9 +32,16 @@ public class ApparatusValvesStatus : MonoBehaviour
 
             if(xrlever != null)
             {
-                Debug.Log("Status of each lever " + i + xrlever.value);
-                leversBoolValue.Add(xrlever.value);
+                //Debug.Log("Status of each lever " + i + xrlever.value);
+                //leversBoolValue.Add(xrlever.value);
+                if(i <= leverStatus.Length)
+                {
+                    Debug.Log("Levers in scene: " + xrlever.name);
+                    leversBoolValue.Add(xrlever.value);
+                    
+                }
             }
+            
         }
     }
     

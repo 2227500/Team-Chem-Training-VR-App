@@ -62,18 +62,7 @@ namespace UnityEngine.XR.Content.Interaction
             m_TurnSpeedLabel.text = $"{knobRotateValue.ToString(k_DegreeFormat)}{k_TurnSpeedUnitLabel}";
         }
 
-        //public float leverRotateValue;
-        //public void LeverTurnAngle()
-        //{
-        //    float turnValue = 0;
-        //    leverRotateValue = Mathf.Lerp(m_LeftHandLocomotionTypeToggle.minAngle, m_LeftHandLocomotionTypeToggle.maxAngle, turnValue);
-        //    m_LeverTurnAngleLabel.text = $"{knobRotateValue.ToString(k_DegreeFormat)}{k_TurnSpeedUnitLabel}";
-        //}
-
-        //private void Update()
-        //{
-        //    Debug.Log(m_LeverTurnAngleLabel.text);
-        //}
+        
     }
 }
 
