@@ -4145,7 +4145,7 @@ PrefabInstance:
     - target: {fileID: 2404663377163517947, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2404663377163517947, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
         type: 3}
@@ -4155,8 +4155,18 @@ PrefabInstance:
     - target: {fileID: 2404663377163517947, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2404663377163517947, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
+    - target: {fileID: 2404663377163517947, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     - target: {fileID: 4135362829499419431, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
         type: 3}
       propertyPath: m_Name
@@ -4188,7 +4198,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157407850}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -6693,22 +6703,22 @@ PrefabInstance:
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 2.0196136e-19
+      value: 1.4607148e-19
       objectReference: {fileID: 0}
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 2.7081723e+23
+      value: 7.556296e+31
       objectReference: {fileID: 0}
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 1.817742e+31
+      value: 6.878344e+11
       objectReference: {fileID: 0}
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 4.630422e+27
+      value: 7.3982314e+31
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6482a355bf9be7f43b3d96c28a104d0a, type: 3}
@@ -8140,7 +8150,7 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
@@ -8150,8 +8160,18 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
+    - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f72a794cff6d8334e85953b8827c1d25, type: 3}
 --- !u!4 &315451046 stripped
@@ -8173,7 +8193,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315451047}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -8356,7 +8376,7 @@ PrefabInstance:
     - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
@@ -8366,8 +8386,18 @@ PrefabInstance:
     - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
+    - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     - target: {fileID: 6692103999483216809, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
       propertyPath: m_Name
@@ -8454,7 +8484,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 322901240}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -11228,22 +11258,22 @@ PrefabInstance:
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 2.0196252e-19
+      value: 1.4607148e-19
       objectReference: {fileID: 0}
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 2.7081723e+23
+      value: 1.05e-43
       objectReference: {fileID: 0}
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 1.817742e+31
+      value: 4.165041e-11
       objectReference: {fileID: 0}
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 4.630422e+27
+      value: 7.3840913e+31
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6482a355bf9be7f43b3d96c28a104d0a, type: 3}
@@ -11774,7 +11804,7 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
@@ -11784,8 +11814,18 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
+    - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f72a794cff6d8334e85953b8827c1d25, type: 3}
 --- !u!4 &434502878 stripped
@@ -11807,7 +11847,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434502879}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -11895,7 +11935,7 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
@@ -11905,8 +11945,18 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
+    - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f72a794cff6d8334e85953b8827c1d25, type: 3}
 --- !u!4 &437353993 stripped
@@ -11928,7 +11978,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437353994}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -17058,7 +17108,7 @@ PrefabInstance:
     - target: {fileID: 2404663377163517947, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2404663377163517947, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
         type: 3}
@@ -17068,13 +17118,18 @@ PrefabInstance:
     - target: {fileID: 2404663377163517947, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2404663377163517947, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     - target: {fileID: 2404663377163517947, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 2ac0fd036f92c324cbe289656edc74d9, type: 2}
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     - target: {fileID: 4135362829499419431, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
         type: 3}
       propertyPath: m_Name
@@ -17106,7 +17161,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619425203}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -17194,7 +17249,7 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
@@ -17204,8 +17259,18 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
+    - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f72a794cff6d8334e85953b8827c1d25, type: 3}
 --- !u!4 &620262900 stripped
@@ -17227,7 +17292,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620262901}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -20616,7 +20681,7 @@ PrefabInstance:
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 68.00017
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
@@ -20631,7 +20696,7 @@ PrefabInstance:
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 6.7e-44
+      value: 14.000046
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6482a355bf9be7f43b3d96c28a104d0a, type: 3}
@@ -22339,7 +22404,7 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
@@ -22349,8 +22414,18 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
+    - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f72a794cff6d8334e85953b8827c1d25, type: 3}
 --- !u!4 &866057660 stripped
@@ -22372,7 +22447,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 866057661}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -23457,7 +23532,7 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
@@ -23467,13 +23542,18 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 2ac0fd036f92c324cbe289656edc74d9, type: 2}
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f72a794cff6d8334e85953b8827c1d25, type: 3}
 --- !u!4 &898232294 stripped
@@ -23495,7 +23575,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898232295}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -23833,22 +23913,22 @@ PrefabInstance:
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: NaN
+      value: 163.00029
       objectReference: {fileID: 0}
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: NaN
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: -8.129078e+16
+      value: 156
       objectReference: {fileID: 0}
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: NaN
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6482a355bf9be7f43b3d96c28a104d0a, type: 3}
@@ -24900,7 +24980,7 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
@@ -24910,8 +24990,18 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
+    - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f72a794cff6d8334e85953b8827c1d25, type: 3}
 --- !u!4 &987413939 stripped
@@ -24933,7 +25023,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 987413940}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -26367,7 +26457,7 @@ PrefabInstance:
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 163
+      value: 2.7e-44
       objectReference: {fileID: 0}
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
@@ -26377,12 +26467,12 @@ PrefabInstance:
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 4.028617e-11
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 1.7288e-41
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6482a355bf9be7f43b3d96c28a104d0a, type: 3}
@@ -26748,7 +26838,7 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
@@ -26758,8 +26848,18 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
+    - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f72a794cff6d8334e85953b8827c1d25, type: 3}
 --- !u!4 &1073720810 stripped
@@ -26781,7 +26881,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1073720811}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -29350,7 +29450,7 @@ PrefabInstance:
     - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
@@ -29360,8 +29460,18 @@ PrefabInstance:
     - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
+    - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     - target: {fileID: 6692103999483216809, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
       propertyPath: m_Name
@@ -29448,7 +29558,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179403514}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -30183,7 +30293,7 @@ PrefabInstance:
     - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
@@ -30193,8 +30303,18 @@ PrefabInstance:
     - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
+    - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     - target: {fileID: 6692103999483216809, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
       propertyPath: m_Name
@@ -30281,7 +30401,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198466509}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -30350,7 +30470,7 @@ PrefabInstance:
     - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
@@ -30360,8 +30480,18 @@ PrefabInstance:
     - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
+    - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     - target: {fileID: 6692103999483216809, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
       propertyPath: m_Name
@@ -30448,7 +30578,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1212831266}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -32515,7 +32645,7 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
@@ -32525,8 +32655,18 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
+    - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f72a794cff6d8334e85953b8827c1d25, type: 3}
 --- !u!4 &1290398695 stripped
@@ -32548,7 +32688,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290398696}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -32651,7 +32791,7 @@ PrefabInstance:
     - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
@@ -32661,8 +32801,18 @@ PrefabInstance:
     - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
+    - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     - target: {fileID: 6692103999483216809, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
       propertyPath: m_Name
@@ -32749,7 +32899,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312987274}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -33983,9 +34133,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8768517714599390491, guid: c316a196110f76e45b15809eb225c8c1,
         type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3538c1c48c20916439cf8f55c7be2f2d, type: 2}
+    - target: {fileID: 8768517714599390491, guid: c316a196110f76e45b15809eb225c8c1,
+        type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 2ac0fd036f92c324cbe289656edc74d9, type: 2}
+      objectReference: {fileID: 2100000, guid: 3538c1c48c20916439cf8f55c7be2f2d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c316a196110f76e45b15809eb225c8c1, type: 3}
 --- !u!4 &1349355619 stripped
@@ -36937,7 +37092,7 @@ PrefabInstance:
     - target: {fileID: 1637361087231992837, guid: 685520882a1ae09438c34e2e98ceeb34,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.06
+      value: 1.02
       objectReference: {fileID: 0}
     - target: {fileID: 1637361087231992837, guid: 685520882a1ae09438c34e2e98ceeb34,
         type: 3}
@@ -36952,7 +37107,7 @@ PrefabInstance:
     - target: {fileID: 1637361087231992837, guid: 685520882a1ae09438c34e2e98ceeb34,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.5090001
+      value: -1.507
       objectReference: {fileID: 0}
     - target: {fileID: 1637361087231992837, guid: 685520882a1ae09438c34e2e98ceeb34,
         type: 3}
@@ -37873,7 +38028,7 @@ PrefabInstance:
     - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
@@ -37883,8 +38038,18 @@ PrefabInstance:
     - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
+    - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     - target: {fileID: 6692103999483216809, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
       propertyPath: m_Name
@@ -37971,7 +38136,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504721652}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -39926,7 +40091,7 @@ PrefabInstance:
     - target: {fileID: 2404663377163517947, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2404663377163517947, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
         type: 3}
@@ -39936,8 +40101,18 @@ PrefabInstance:
     - target: {fileID: 2404663377163517947, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2404663377163517947, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
+    - target: {fileID: 2404663377163517947, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     - target: {fileID: 4135362829499419431, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
         type: 3}
       propertyPath: m_Name
@@ -39969,7 +40144,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567228153}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -41425,7 +41600,7 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
@@ -41435,8 +41610,18 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
+    - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f72a794cff6d8334e85953b8827c1d25, type: 3}
 --- !u!4 &1616686996 stripped
@@ -41458,7 +41643,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616686997}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -42692,7 +42877,7 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
@@ -42702,8 +42887,18 @@ PrefabInstance:
     - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
+    - target: {fileID: 8628557881322522424, guid: f72a794cff6d8334e85953b8827c1d25,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f72a794cff6d8334e85953b8827c1d25, type: 3}
 --- !u!4 &1667878596 stripped
@@ -42725,7 +42920,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667878597}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -44009,7 +44204,7 @@ PrefabInstance:
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 4.0765575e+24
+      value: 6.890596e+22
       objectReference: {fileID: 0}
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
@@ -44746,7 +44941,7 @@ PrefabInstance:
     - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
@@ -44756,8 +44951,18 @@ PrefabInstance:
     - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
+    - target: {fileID: 4964082987688343413, guid: c4402a99b5f4ee142864357b19c731ff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     - target: {fileID: 6692103999483216809, guid: c4402a99b5f4ee142864357b19c731ff,
         type: 3}
       propertyPath: m_Name
@@ -44844,7 +45049,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717108185}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -44922,7 +45127,7 @@ PrefabInstance:
     - target: {fileID: 2404663377163517947, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
         type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2404663377163517947, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
         type: 3}
@@ -44932,8 +45137,18 @@ PrefabInstance:
     - target: {fileID: 2404663377163517947, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
         type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2404663377163517947, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
+    - target: {fileID: 2404663377163517947, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94629f9ea8c20dc4e80e6be424c120f6, type: 2}
     - target: {fileID: 4135362829499419431, guid: a4d2470e07ccd6c469dc6860b57e0cb9,
         type: 3}
       propertyPath: m_Name
@@ -44965,7 +45180,7 @@ LightProbeProxyVolume:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723452450}
-  m_Enabled: 0
+  m_Enabled: 1
   m_BoundingBoxMode: 0
   m_ResolutionX: 2
   m_ResolutionY: 2
@@ -48903,7 +49118,7 @@ PrefabInstance:
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 6.890596e+22
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
@@ -48918,7 +49133,7 @@ PrefabInstance:
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 4.757186e+30
+      value: 8.0117655
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6482a355bf9be7f43b3d96c28a104d0a, type: 3}
@@ -55805,7 +56020,7 @@ PrefabInstance:
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 2.469842e+25
+      value: 6.890596e+22
       objectReference: {fileID: 0}
     - target: {fileID: 8625397490805126484, guid: 6482a355bf9be7f43b3d96c28a104d0a,
         type: 3}
