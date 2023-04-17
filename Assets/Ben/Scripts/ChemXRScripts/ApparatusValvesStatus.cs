@@ -7,43 +7,44 @@ public class ApparatusValvesStatus : MonoBehaviour
 {
     public XRKnob[] knobStatus;
     public XRPushButton[] pushButtonStatus;
-    public XRLever[] leverStatus;
+    //public XRLever[] leverStatus;
 
 
-    [SerializeField]
-    private List<bool> leversBoolValue;
+    //[SerializeField]
+    //private List<bool> leversBoolValue;
     [SerializeField]
     private List<float> knobValue;
 
     private void Start()
     {
-        leversBoolValue = new List<bool>();
+        //leversBoolValue = new List<bool>();
     }
     private void Update()
     {
-        LeverStatus();
+        //LeverStatus();
+        KnobStatus();
     }
 
-    public void LeverStatus()
-    {
-        for(int i = 0; i<leverStatus.Length; i++)
-        {
-            XRLever xrlever = leverStatus[i].GetComponent<XRLever>();
+    //public void LeverStatus()
+    //{
+    //    for(int i = 0; i<leverStatus.Length; i++)
+    //    {
+    //        XRLever xrlever = leverStatus[i].GetComponent<XRLever>();
 
-            if(xrlever != null)
-            {
-                //Debug.Log("Status of each lever " + i + xrlever.value);
-                //leversBoolValue.Add(xrlever.value);
-                if(i <= leverStatus.Length)
-                {
-                    Debug.Log("Levers in scene: " + xrlever.name);
-                    leversBoolValue.Add(xrlever.value);
+    //        if(xrlever != null)
+    //        {
+    //            //Debug.Log("Status of each lever " + i + xrlever.value);
+    //            //leversBoolValue.Add(xrlever.value);
+    //            if(i <= leverStatus.Length)
+    //            {
+    //                Debug.Log("Levers in scene: " + xrlever.name);
+    //                leversBoolValue.Add(xrlever.value);
                     
-                }
-            }
+    //            }
+    //        }
             
-        }
-    }
+    //    }
+    //}
     
     public void KnobStatus()
     {
