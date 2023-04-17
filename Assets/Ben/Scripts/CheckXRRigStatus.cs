@@ -10,18 +10,22 @@ using UnityEngine;
 public class CheckXRRigStatus : MonoBehaviour
 {
     public HandAndMovement handStatus;
-    public bool teleportMovementStatus = false;
+    public bool teleportMovementStatus;
 
     public bool isLeftDominantHand;
     public bool isRightDominantHand;
+
+   
 
     private void Start()
     {
         teleportMovementStatus = false;
         isLeftDominantHand = false;
         isRightDominantHand = false;
-        handStatus = GameObject.FindObjectOfType<HandAndMovement>();
+        handStatus = GameObject.FindObjectOfType<HandAndMovement>();        
     }
+
+
     public void IsTeleportMovementSelected()
     {
         if (handStatus.teleportMovement)
@@ -34,5 +38,11 @@ public class CheckXRRigStatus : MonoBehaviour
         }
         isLeftDominantHand = handStatus.leftHandUser;
         isRightDominantHand = handStatus.righttHandUser;
+    }
+
+
+    private void Update()
+    {
+        IsTeleportMovementSelected();
     }
 }

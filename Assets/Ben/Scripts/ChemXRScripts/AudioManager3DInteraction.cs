@@ -14,7 +14,7 @@ public class AudioManager3DInteraction : MonoBehaviour
         {
             instructionAudioSource[0].clip = instructionAudios[0];
             instructionAudioSource[0].Play();
-            //instructionAudioSource[1].Stop();
+            instructionAudioSource[1].Stop();
             //instructionAudioSource[2].Stop();
             //instructionAudioSource[3].Stop();
         }

@@ -9,16 +9,18 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class XRRigStatus : MonoBehaviour
 {
-    [SerializeField]
-    private bool teleportationOpted;
+    
     [SerializeField]
     private TeleportationArea sceneTeleportArea;
     [SerializeField]
     public CheckXRRigStatus xRRigStatus;
 
+    public GameObject playerSpawnPoint;
+    private GameObject player;
 
     private void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("Respawn");
         sceneTeleportArea = GameObject.FindObjectOfType<TeleportationArea>();
         xRRigStatus = GameObject.FindObjectOfType<CheckXRRigStatus>();
         Debug.Log("New Scene Loaded");
@@ -27,6 +29,7 @@ public class XRRigStatus : MonoBehaviour
     private void Start()
     {
         ActivateOrDeactiveteTeleportArea();
+        player.transform.position = playerSpawnPoint.transform.position;
     }
 
     /// <summary>
