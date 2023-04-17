@@ -26,14 +26,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1157011508392567884}
-  m_LocalRotation: {x: -0.70203465, y: -0.07692597, z: 0.07674133, w: 0.7038044}
-  m_LocalPosition: {x: -0.0050000944, y: 0.024999997, z: 0}
+  m_LocalRotation: {x: 0.03084362, y: 0.7064338, z: 0.7064338, w: 0.03084362}
+  m_LocalPosition: {x: -0.0039, y: 0.0241, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6058763033900946117}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -77.523, y: -89.348, z: 89.333}
+  m_LocalEulerAnglesHint: {x: -85, y: 90, z: 90}
 --- !u!33 &6561419965329501289
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -238,7 +238,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6058763032345079573}
-  m_LocalRotation: {x: -0, y: -0, z: -0.10452837, w: 0.9945219}
+  m_LocalRotation: {x: 0, y: 0, z: -0.10452837, w: 0.9945219}
   m_LocalPosition: {x: -0.018, y: 0.931, z: -0.222}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -279,20 +279,7 @@ MonoBehaviour:
   m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
-        m_MethodName: set_text
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Using the GRIP button of the controller grab the dial
-            and turn the dial.
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_LastHoverExited:
     m_PersistentCalls:
       m_Calls: []
@@ -351,7 +338,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Handle: {fileID: 6058763032832018269}
-  m_Value: 1
+  m_Value: 0
   m_ClampedMotion: 1
   m_MaxAngle: 90
   m_MinAngle: 0
@@ -360,7 +347,19 @@ MonoBehaviour:
   m_TwistSensitivity: 1.5
   m_OnValueChange:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &6058763032399494061
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,7 +580,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6058763032832018270}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
