@@ -54,7 +54,7 @@ public class ApparatusValvesStatus : MonoBehaviour
 
             if (xrknob != null)
             {
-                Debug.Log("Status of each lever " + i + xrknob.value);
+                //Debug.Log("Status of each lever " + i + xrknob.value);
                 knobValue.Add(xrknob.value);
             }
         }

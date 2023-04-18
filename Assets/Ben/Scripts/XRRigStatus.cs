@@ -23,7 +23,7 @@ public class XRRigStatus : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Respawn");
         sceneTeleportArea = GameObject.FindObjectOfType<TeleportationArea>();
         xRRigStatus = GameObject.FindObjectOfType<CheckXRRigStatus>();
-        Debug.Log("New Scene Loaded");
+        //Debug.Log("New Scene Loaded");
     }
 
     private void Start()

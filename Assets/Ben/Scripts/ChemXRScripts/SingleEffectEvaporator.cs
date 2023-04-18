@@ -48,6 +48,13 @@ public class SingleEffectEvaporator : MonoBehaviour
         _heatTransferRate = _finalFeedEnthalpy - _initialFeedEnthalpy - _finalEvaporatedEnthalpy;
 
         Debug.Log("Heat transfer rate: " + _heatTransferRate + " kW");
+        Debug.Log("Final Evaporated Enthalpy: " + _finalEvaporatedEnthalpy);
+        Debug.Log("Final Evaporated Mass: " + _finalEvaporatedMass);
+        Debug.Log("Final Feed Density: " + _finalFeedDensity);
+        Debug.Log("Final Feed Enthalpy: " + _finalFeedEnthalpy);
+        Debug.Log("Final Feed Mass: " + _finalFeedMass);
+        Debug.Log("Final Feed Specific Heat: " + _finalFeedSpecificHeat);
+        Debug.Log("Final Feed Volume: " + _finalFeedVolume);
     }
 
     private void Update()
