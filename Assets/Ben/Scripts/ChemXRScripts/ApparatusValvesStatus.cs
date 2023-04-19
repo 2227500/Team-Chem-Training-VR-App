@@ -8,7 +8,7 @@ public class ApparatusValvesStatus : MonoBehaviour
     public XRKnob[] knobStatus;
     public XRPushButton[] pushButtonStatus;
     //public XRLever[] leverStatus;
-
+    public bool isValveFullyOpen;
 
     //[SerializeField]
     //private List<bool> leversBoolValue;
@@ -21,30 +21,9 @@ public class ApparatusValvesStatus : MonoBehaviour
     }
     private void Update()
     {
-        //LeverStatus();
         KnobStatus();
     }
 
-    //public void LeverStatus()
-    //{
-    //    for(int i = 0; i<leverStatus.Length; i++)
-    //    {
-    //        XRLever xrlever = leverStatus[i].GetComponent<XRLever>();
-
-    //        if(xrlever != null)
-    //        {
-    //            //Debug.Log("Status of each lever " + i + xrlever.value);
-    //            //leversBoolValue.Add(xrlever.value);
-    //            if(i <= leverStatus.Length)
-    //            {
-    //                Debug.Log("Levers in scene: " + xrlever.name);
-    //                leversBoolValue.Add(xrlever.value);
-                    
-    //            }
-    //        }
-            
-    //    }
-    //}
     
     public void KnobStatus()
     {
@@ -52,10 +31,9 @@ public class ApparatusValvesStatus : MonoBehaviour
         {
             XRKnob xrknob = knobStatus[i].GetComponent<XRKnob>();
 
-            if (xrknob != null)
+            if (xrknob.value >=0.9f)
             {
-                Debug.Log("Status of each lever " + i + xrknob.value);
-                knobValue.Add(xrknob.value);
+                isValveFullyOpen = true;
             }
         }
     }
