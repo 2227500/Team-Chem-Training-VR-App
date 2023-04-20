@@ -1,0 +1,11 @@
+Model Information:
+* title:	Medical Mask
+* source:	https://sketchfab.com/3d-models/medical-mask-0b2bd5fe961e42b584648101e51bd68f
+* author:	IOX (https://sketchfab.com/ctrld3l)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Medical Mask" (https://sketchfab.com/3d-models/medical-mask-0b2bd5fe961e42b584648101e51bd68f) by IOX (https://sketchfab.com/ctrld3l) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
