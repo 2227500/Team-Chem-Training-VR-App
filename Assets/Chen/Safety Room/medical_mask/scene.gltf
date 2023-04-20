@@ -1,0 +1,259 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 183,
+      "max": [
+        82.74356079101563,
+        103.06261444091797,
+        85.84828186035156
+      ],
+      "min": [
+        -77.47615051269531,
+        -30.789403915405273,
+        -56.852783203125
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 2196,
+      "componentType": 5126,
+      "count": 183,
+      "max": [
+        0.9879302978515625,
+        0.9284458756446838,
+        0.9653272032737732
+      ],
+      "min": [
+        -0.9993060827255249,
+        -0.8161951303482056,
+        -0.8851528763771057
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 183,
+      "max": [
+        67.45335388183594,
+        1838.14013671875
+      ],
+      "min": [
+        -67.45335388183594,
+        -17.073486328125
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 534,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 4392,
+      "componentType": 5126,
+      "count": 305,
+      "max": [
+        54.72813034057617,
+        18.531858444213867,
+        40.598018646240234
+      ],
+      "min": [
+        -56.862545013427734,
+        -38.884220123291016,
+        -51.6851806640625
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 8052,
+      "componentType": 5126,
+      "count": 305,
+      "max": [
+        0.8742799162864685,
+        0.9574015140533447,
+        0.6872842311859131
+      ],
+      "min": [
+        -0.9736743569374084,
+        -0.9924734830856323,
+        -0.9998911619186401
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1464,
+      "componentType": 5126,
+      "count": 305,
+      "max": [
+        97.3891830444336,
+        53.543212890625
+      ],
+      "min": [
+        -33.539825439453125,
+        -68.3853759765625
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 2136,
+      "componentType": 5125,
+      "count": 1572,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "IOX (https://sketchfab.com/ctrld3l)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/medical-mask-0b2bd5fe961e42b584648101e51bd68f",
+      "title": "Medical Mask"
+    },
+    "generator": "Sketchfab-12.65.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 8424,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3904,
+      "byteOffset": 8424,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 11712,
+      "byteOffset": 12328,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 24040,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "FABRIC_1_FRONT_4317",
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.9827475502465659
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "FABRIC_2_FRONT_4322",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.28852863303107146,
+          0.6393210613494986,
+          0.7076012526892669,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.9827475502465659
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Object_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Object_1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        0.009092089720070362,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0011513785439732896,
+        -0.00901889275567408,
+        0.0,
+        0.0,
+        0.00901889275567408,
+        -0.0011513785439732896,
+        0.0,
+        0.0,
+        4.180783748626709,
+        1.5764943361282358,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2,
+        3
+      ],
+      "name": "mask2.obj.cleaner.materialmerger.gles"
+    },
+    {
+      "mesh": 0,
+      "name": "Object_2"
+    },
+    {
+      "mesh": 1,
+      "name": "Object_3"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}

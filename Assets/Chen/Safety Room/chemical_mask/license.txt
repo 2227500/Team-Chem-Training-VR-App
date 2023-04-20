@@ -1,0 +1,11 @@
+Model Information:
+* title:	Chemical Mask
+* source:	https://sketchfab.com/3d-models/chemical-mask-40b8a909a45a4c4da9bfd50993c17cd0
+* author:	DPMA (https://sketchfab.com/DanTronMcTronDan)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Chemical Mask" (https://sketchfab.com/3d-models/chemical-mask-40b8a909a45a4c4da9bfd50993c17cd0) by DPMA (https://sketchfab.com/DanTronMcTronDan) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
