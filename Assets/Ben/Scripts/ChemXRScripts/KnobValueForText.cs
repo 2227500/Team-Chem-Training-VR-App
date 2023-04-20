@@ -14,26 +14,14 @@ public class KnobValueForText : MonoBehaviour
     {
         calculatedValues = new SingleEffectEvaporatorCalculation();
     }
-
     private void Update()
     {
-        //calculatedValues.UpdateValues();
     }
+
+
     public void KnobeValue()
     {
-        var value = 100f * knob.value;
-        knobValueText.text = value.ToString();
-    }
-
-    public void SteamValueChange()
-    {
-        calculatedValues.OnSteamFlowRateChanged(knobValueText.text);
-        calculatedValues.UpdateValues();
-    }
-
-    public void FeedRateChange()
-    {
-        calculatedValues.OnSteamFlowRateChanged(knob.value.ToString());
-        calculatedValues.UpdateValues();
+        knobValueText.text = knob.value.ToString();
+        calculatedValues.OnFeedFlowRateChanged(knobValueText.text);
     }
 }

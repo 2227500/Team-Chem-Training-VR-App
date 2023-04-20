@@ -1,13 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.XR.Content.Interaction;
 
 public class SingleEffectEvaporatorCalculation : MonoBehaviour
 {
-    public float feedFlowRate; // Feed flow rate in kg/hr
-    public float feedConcentration; // Feed concentration in kg/kg
-    public float steamFlowRate; // Steam flow rate in kg/hr
-    public float evaporationRate; // Evaporation rate in kg/hr
+    public float feedFlowRate = 100.0f; // Feed flow rate in kg/hr
+    public float feedConcentration = 0.05f; // Feed concentration in kg/kg
+    public float steamFlowRate = 20.0f; // Steam flow rate in kg/hr
+    public float evaporationRate = 0.05f; // Evaporation rate in kg/hr
     public Text feedFlowRateText;
     public Text feedConcentrationText;
     public Text steamFlowRateText;
@@ -28,18 +27,19 @@ public class SingleEffectEvaporatorCalculation : MonoBehaviour
     private float _finalEvaporatedEnthalpy; // Final enthalpy of evaporated water
     private float _heatTransferRate; // Heat transfer rate in kW
 
-    public XRKnob steamKnob;
     void Start()
     {
         UpdateValues();
     }
-
+    private void Update()
+    {
+        
+    }
 
     public void OnFeedFlowRateChanged(string value)
     {
         float.TryParse(value, out feedFlowRate);
         UpdateValues();
-        //Debug.Log("Flow rate: " + feedFlowRate);
     }
 
     public void OnFeedConcentrationChanged(string value)
@@ -52,15 +52,12 @@ public class SingleEffectEvaporatorCalculation : MonoBehaviour
     {
         float.TryParse(value, out steamFlowRate);
         UpdateValues();
-        Debug.Log("Steam FLow rate: " + steamFlowRate);
-        
     }
 
     public void OnEvaporationRateChanged(string value)
     {
         float.TryParse(value, out evaporationRate);
         UpdateValues();
-        //Debug.Log(evaporationRate);
     }
 
   
@@ -73,7 +70,7 @@ public class SingleEffectEvaporatorCalculation : MonoBehaviour
         UpdateValues();
     }
 
-    public void UpdateValues()
+    private void UpdateValues()
     {
         // Calculate initial properties of feed
         _initialFeedMass = feedFlowRate;
@@ -97,13 +94,6 @@ public class SingleEffectEvaporatorCalculation : MonoBehaviour
         _heatTransferRate = _finalFeedEnthalpy - _initialFeedEnthalpy - _finalEvaporatedEnthalpy;
 
         Debug.Log("Heat transfer rate: " + _heatTransferRate + " kW");
-        Debug.Log("Final Evaporated Enthalpy: " + _finalEvaporatedEnthalpy);
-        Debug.Log("Final Evaporated Mass: " + _finalEvaporatedMass);
-        Debug.Log("Final Feed Density: " + _finalFeedDensity);
-        Debug.Log("Final Feed Enthalpy: " + _finalFeedEnthalpy);
-        Debug.Log("Final Feed Mass: " + _finalFeedMass);
-        Debug.Log("Final Feed Specific Heat: " + _finalFeedSpecificHeat);
-        Debug.Log("Final Feed Volume: " + _finalFeedVolume);
 
         // Update UI
         feedFlowRateText.text = "Feed flow rate: " + feedFlowRate.ToString("0.00") + " kg/hr";
