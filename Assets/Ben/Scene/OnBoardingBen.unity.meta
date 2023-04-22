@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Ben/Scene/OnBoardingBen.unity.meta
 guid: 4b4f29a3ab0447347bffaccacdb4a0ed
+========
+guid: bd4ef9568fd1d29449849f1aaa8f39aa
+>>>>>>>> main:Assets/Chen/Laboratory/Settings/HDRP/HDRP.unitypackage.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
