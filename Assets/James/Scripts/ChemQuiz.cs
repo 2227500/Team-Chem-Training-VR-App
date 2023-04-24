@@ -6,6 +6,12 @@ public class ChemQuiz : MonoBehaviour
     public TMP_Text questionText;
     public TMP_Text feedbackText;
 
+    public Button Button1;
+    public Button Button2;
+    public Button Button3;
+    public Button Button4;
+
+
     private int currentQuestion = 1;
 
     public void CheckAnswer(int answer)
