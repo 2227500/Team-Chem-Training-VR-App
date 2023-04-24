@@ -6,32 +6,53 @@ using UnityEngine.XR.Content.Interaction;
 
 public class TabletUIupdate : MonoBehaviour
 {
-    public XRKnob[] xrKnob;
+    public XRKnob[] fullyOpenXRKnob;
     public Image[] fullyOpenImage;
+
+    public XRKnob[] partiallyOpenXRKnob;
+    public Image[] partiallyOpenImage;
 
     private void Update()
     {
-        KnobStatus();
+        FullyOpenKnobStatus();
+        PartiallyOpenKnobStatus();
     }
 
 
-    public void KnobStatus()
+    public void FullyOpenKnobStatus()
     {
-        for (int i = 0; i < xrKnob.Length; i++)
+        for (int i = 0; i < fullyOpenXRKnob.Length; i++)
         {
-            XRKnob xrknobvar = xrKnob[i].GetComponent<XRKnob>();
+            XRKnob xrknobvar = fullyOpenXRKnob[i].GetComponent<XRKnob>();
 
             if (xrknobvar.value >= 0.9f)
             {
                 fullyOpenImage[i].color = Color.white;
             }
-            else if(xrknobvar.value >= 0.45f && xrknobvar.value <= 0.55f)
+            else if (xrknobvar.value >= 0.45f && xrknobvar.value <= 0.55f)
             {
                 fullyOpenImage[i].color = Color.yellow;
             }
-            else if(xrknobvar.value < 0.45f)
+            else if (xrknobvar.value < 0.45f)
             {
                 fullyOpenImage[i].color = Color.red;
+            }
+        }
+    }
+
+    public void PartiallyOpenKnobStatus()
+    {
+        for (int i = 0; i < partiallyOpenXRKnob.Length; i++)
+        {
+            XRKnob xrknobvar = partiallyOpenXRKnob[i].GetComponent<XRKnob>();
+
+            if (xrknobvar.value >= 0.45f)
+            {
+                partiallyOpenImage[i].color = Color.white;
+            }
+            else if (xrknobvar.value < 0.45f)
+            {
+                partiallyOpenImage[i].color = Color.red;
             }
         }
     }
