@@ -16,22 +16,22 @@ public class ChemQuiz : MonoBehaviour
 
     private int currentQuestion = 1;
 
-    public GameObject prefabToSpawn1;
-    public GameObject prefabToSpawn2;
-    public GameObject prefabToSpawn3;
-    public GameObject prefabToSpawn4;
+    public GameObject prefab1;
+    //public GameObject prefab2;
+    //public GameObject prefab3;
+    //public GameObject prefab4;
 
-    public GameObject prefabToSpawn5;
-    public GameObject prefabToSpawn6;
-    public GameObject prefabToSpawn7;
-    public GameObject prefabToSpawn8;
+    //public GameObject prefab5;
+    //public GameObject prefab6;
+    //public GameObject prefab7;
+    //public GameObject prefab8;
 
-    public Transform spawnPoint;
-    public GameObject objectToSpawnAbove;
+    //public Transform spawnPoint;
+    //public GameObject objectToSpawnAbove;
 
-    public float spawnHeight = 1f;
+    //public float spawnHeight = 1f;
 
-    private GameObject spawnedObject;
+    //private GameObject spawnedObject;
 
 
     public void CheckAnswer(int answer)
@@ -43,7 +43,7 @@ public class ChemQuiz : MonoBehaviour
         else if (currentQuestion == 2 && answer == 1)
         {
             feedbackText.text = "Correct!";
-            Destroy(spawnedObject);
+
         }
         else if (currentQuestion == 3 && answer == 3)
         {
@@ -56,7 +56,6 @@ public class ChemQuiz : MonoBehaviour
         else if (currentQuestion == 5 && answer == 3)
         {
             feedbackText.text = "Correct!";
-            Destroy(spawnedObject);
         }
         else
         {
@@ -76,10 +75,10 @@ public class ChemQuiz : MonoBehaviour
             if (currentQuestion == 2)
             {
                 questionText.text = "Question " + currentQuestion + ": Which of these components is the condenser?";
-                Button1.GetComponentInChildren<TMP_Text>().text = "";
-                Button2.GetComponentInChildren<TMP_Text>().text = "";
-                Button3.GetComponentInChildren<TMP_Text>().text = "";
-                Button4.GetComponentInChildren<TMP_Text>().text = "";
+                Button1.GetComponentInChildren<TMP_Text>().text = "1";
+                Button2.GetComponentInChildren<TMP_Text>().text = "2";
+                Button3.GetComponentInChildren<TMP_Text>().text = "3";
+                Button4.GetComponentInChildren<TMP_Text>().text = "4";
             }
             else if (currentQuestion == 3)
             {
@@ -99,19 +98,24 @@ public class ChemQuiz : MonoBehaviour
             }
             else if (currentQuestion == 5)
             {
-                questionText.text = "Question " + currentQuestion + ": ?";
-                Button1.GetComponentInChildren<TMP_Text>().text = "";
-                Button2.GetComponentInChildren<TMP_Text>().text = "";
-                Button3.GetComponentInChildren<TMP_Text>().text = "";
-                Button4.GetComponentInChildren<TMP_Text>().text = "";
+                questionText.text = "Question " + currentQuestion + ": 1?";
+                Button1.GetComponentInChildren<TMP_Text>().text = "1";
+                Button2.GetComponentInChildren<TMP_Text>().text = "2";
+                Button3.GetComponentInChildren<TMP_Text>().text = "3";
+                Button4.GetComponentInChildren<TMP_Text>().text = "4";
             }
             else
             {
+                //Instantiate(prefab1, new Vector3(0, 2, 0), Quaternion.identity);
+                //Instantiate(prefab2, new Vector3(0, 1, 0), Quaternion.identity);
+                //Instantiate(prefab3, new Vector3(0, 3, 0), Quaternion.identity);
+                //Instantiate(prefab4, new Vector3(0, 4, 0), Quaternion.identity);
+
                 questionText.text = "Question " + currentQuestion + ": Which piece of safety equipment did we not use?";
-                Button1.GetComponentInChildren<TMP_Text>().text = "";
-                Button2.GetComponentInChildren<TMP_Text>().text = "";
-                Button3.GetComponentInChildren<TMP_Text>().text = "";
-                Button4.GetComponentInChildren<TMP_Text>().text = "";
+                Button1.GetComponentInChildren<TMP_Text>().text = "1";
+                Button2.GetComponentInChildren<TMP_Text>().text = "2";
+                Button3.GetComponentInChildren<TMP_Text>().text = "3";
+                Button4.GetComponentInChildren<TMP_Text>().text = "4";
             }
         }
     }

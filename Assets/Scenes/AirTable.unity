@@ -1154,6 +1154,8 @@ MonoBehaviour:
   Button2: {fileID: 293944804}
   Button3: {fileID: 844189096}
   Button4: {fileID: 1154419327}
+  prefab1: {fileID: -6689036041284674117, guid: 6d1d781307da1024591c5040f10df110,
+    type: 3}
 --- !u!114 &560374915
 MonoBehaviour:
   m_ObjectHideFlags: 0
