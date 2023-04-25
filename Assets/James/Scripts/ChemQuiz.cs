@@ -1,0 +1,118 @@
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+public class ChemQuiz : MonoBehaviour
+{
+    public TMP_Text questionText;
+
+    public TMP_Text feedbackText;
+
+
+    public Button Button1;
+    public Button Button2;
+    public Button Button3;
+    public Button Button4;
+
+
+    private int currentQuestion = 1;
+
+    public GameObject prefabToSpawn1;
+    public GameObject prefabToSpawn2;
+    public GameObject prefabToSpawn3;
+    public GameObject prefabToSpawn4;
+
+    public GameObject prefabToSpawn5;
+    public GameObject prefabToSpawn6;
+    public GameObject prefabToSpawn7;
+    public GameObject prefabToSpawn8;
+
+    public Transform spawnPoint;
+    public GameObject objectToSpawnAbove;
+
+    public float spawnHeight = 1f;
+
+    private GameObject spawnedObject;
+
+
+    public void CheckAnswer(int answer)
+    {
+        if (currentQuestion == 1 && answer == 3)
+        {
+            feedbackText.text = "Correct!";
+        }
+        else if (currentQuestion == 2 && answer == 1)
+        {
+            feedbackText.text = "Correct!";
+            Destroy(spawnedObject);
+        }
+        else if (currentQuestion == 3 && answer == 3)
+        {
+            feedbackText.text = "Correct!";
+        }
+        else if (currentQuestion == 4 && answer == 1)
+        {
+            feedbackText.text = "Correct!";
+        }
+        else if (currentQuestion == 5 && answer == 3)
+        {
+            feedbackText.text = "Correct!";
+            Destroy(spawnedObject);
+        }
+        else
+        {
+            feedbackText.text = "Incorrect!";
+        }
+
+        currentQuestion++;
+
+        // Hide the quiz panel after the final question
+        if (currentQuestion > 5)
+        {
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            // Update the question text and answer options for the next question
+            if (currentQuestion == 2)
+            {
+                questionText.text = "Question " + currentQuestion + ": Which of these components is the condenser?";
+                Button1.GetComponentInChildren<TMP_Text>().text = "";
+                Button2.GetComponentInChildren<TMP_Text>().text = "";
+                Button3.GetComponentInChildren<TMP_Text>().text = "";
+                Button4.GetComponentInChildren<TMP_Text>().text = "";
+            }
+            else if (currentQuestion == 3)
+            {
+                questionText.text = "Question " + currentQuestion + ": At the start of the experiment which valve do you not close?";
+                Button1.GetComponentInChildren<TMP_Text>().text = "V12";
+                Button2.GetComponentInChildren<TMP_Text>().text = "V5";
+                Button3.GetComponentInChildren<TMP_Text>().text = "V4";
+                Button4.GetComponentInChildren<TMP_Text>().text = "V8";
+            }
+            else if (currentQuestion == 4)
+            {
+                questionText.text = "Question " + currentQuestion + ": When you started P1 what did you set the feed flowrate to?";
+                Button1.GetComponentInChildren<TMP_Text>().text = "60%";
+                Button2.GetComponentInChildren<TMP_Text>().text = "75%";
+                Button3.GetComponentInChildren<TMP_Text>().text = "50%";
+                Button4.GetComponentInChildren<TMP_Text>().text = "40%";
+            }
+            else if (currentQuestion == 5)
+            {
+                questionText.text = "Question " + currentQuestion + ": ?";
+                Button1.GetComponentInChildren<TMP_Text>().text = "";
+                Button2.GetComponentInChildren<TMP_Text>().text = "";
+                Button3.GetComponentInChildren<TMP_Text>().text = "";
+                Button4.GetComponentInChildren<TMP_Text>().text = "";
+            }
+            else
+            {
+                questionText.text = "Question " + currentQuestion + ": Which piece of safety equipment did we not use?";
+                Button1.GetComponentInChildren<TMP_Text>().text = "";
+                Button2.GetComponentInChildren<TMP_Text>().text = "";
+                Button3.GetComponentInChildren<TMP_Text>().text = "";
+                Button4.GetComponentInChildren<TMP_Text>().text = "";
+            }
+        }
+    }
+}
