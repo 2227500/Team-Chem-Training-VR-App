@@ -16,6 +16,24 @@ public class ChemQuiz : MonoBehaviour
 
     private int currentQuestion = 1;
 
+    public GameObject prefabToSpawn1;
+    public GameObject prefabToSpawn2;
+    public GameObject prefabToSpawn3;
+    public GameObject prefabToSpawn4;
+
+    public GameObject prefabToSpawn5;
+    public GameObject prefabToSpawn6;
+    public GameObject prefabToSpawn7;
+    public GameObject prefabToSpawn8;
+
+    public Transform spawnPoint;
+    public GameObject objectToSpawnAbove;
+
+    public float spawnHeight = 1f;
+
+    private GameObject spawnedObject;
+
+
     public void CheckAnswer(int answer)
     {
         if (currentQuestion == 1 && answer == 3)
@@ -25,6 +43,7 @@ public class ChemQuiz : MonoBehaviour
         else if (currentQuestion == 2 && answer == 1)
         {
             feedbackText.text = "Correct!";
+            Destroy(spawnedObject);
         }
         else if (currentQuestion == 3 && answer == 3)
         {
@@ -37,6 +56,7 @@ public class ChemQuiz : MonoBehaviour
         else if (currentQuestion == 5 && answer == 3)
         {
             feedbackText.text = "Correct!";
+            Destroy(spawnedObject);
         }
         else
         {
