@@ -27,15 +27,15 @@ public class TabletUIupdate : MonoBehaviour
 
             if (xrknobvar.value >= 0.9f)
             {
-                fullyOpenImage[i].color = Color.white;
+                //fullyOpenImage[i].color = Color.white;
             }
             else if (xrknobvar.value >= 0.45f && xrknobvar.value <= 0.55f)
             {
-                fullyOpenImage[i].color = Color.yellow;
+                //fullyOpenImage[i].color = Color.yellow;
             }
             else if (xrknobvar.value < 0.45f)
             {
-                fullyOpenImage[i].color = Color.red;
+                //fullyOpenImage[i].color = Color.red;
             }
         }
     }
@@ -48,11 +48,11 @@ public class TabletUIupdate : MonoBehaviour
 
             if (xrknobvar.value >= 0.45f)
             {
-                partiallyOpenImage[i].color = Color.white;
+                //partiallyOpenImage[i].color = Color.white;
             }
             else if (xrknobvar.value < 0.45f)
             {
-                partiallyOpenImage[i].color = Color.red;
+                //partiallyOpenImage[i].color = Color.red;
             }
         }
     }
