@@ -9056,6 +9056,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a71632661abe01c409dbd681dea1403b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1802080226 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1802080227, guid: 9bfc0135db238cf46b870e4219493a2c,
+    type: 3}
+  m_PrefabInstance: {fileID: 3362955947019101212}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3645ce0f9e5903046a2a27031a02e350, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1819864312
 GameObject:
   m_ObjectHideFlags: 0
@@ -10436,7 +10448,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5848940509550621231}
+      - m_Target: {fileID: 1802080226}
         m_TargetAssemblyTypeName: HandAndMovement, Assembly-CSharp
         m_MethodName: Righthander
         m_Mode: 1
@@ -10608,7 +10620,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5848940509550621231}
+      - m_Target: {fileID: 1802080226}
         m_TargetAssemblyTypeName: HandAndMovement, Assembly-CSharp
         m_MethodName: Lefthander
         m_Mode: 1
@@ -11933,7 +11945,7 @@ PrefabInstance:
         type: 3}
       propertyPath: handStatus
       value: 
-      objectReference: {fileID: 5848940509550621231}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bfc0135db238cf46b870e4219493a2c, type: 3}
 --- !u!1 &3399821746582290450
@@ -12929,18 +12941,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &4778211695690032542 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7846397160099987842, guid: 9bfc0135db238cf46b870e4219493a2c,
-    type: 3}
-  m_PrefabInstance: {fileID: 3362955947019101212}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9ac216f0eb04754b1d938aac6380b31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &5047785397583756142
 Transform:
   m_ObjectHideFlags: 0
@@ -13057,18 +13057,6 @@ Transform:
   m_Father: {fileID: 4577203512605342408}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -85, y: 90, z: 90}
---- !u!114 &5663893676939487669 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6931514643124014505, guid: 9bfc0135db238cf46b870e4219493a2c,
-    type: 3}
-  m_PrefabInstance: {fileID: 3362955947019101212}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9ac216f0eb04754b1d938aac6380b31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &5831744751334604001
 Transform:
   m_ObjectHideFlags: 0
@@ -13159,7 +13147,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5848940509550621231}
+      - m_Target: {fileID: 1802080226}
         m_TargetAssemblyTypeName: HandAndMovement, Assembly-CSharp
         m_MethodName: HandContinuusMovementType
         m_Mode: 1
@@ -13454,24 +13442,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5848940509550621231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5848940509550621265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3645ce0f9e5903046a2a27031a02e350, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftHandUser: 0
-  righttHandUser: 0
-  continuousMotion: 0
-  teleportMovement: 0
-  leftHandControllerManager: {fileID: 4778211695690032542}
-  rightHandControllerManager: {fileID: 5663893676939487669}
 --- !u!114 &5848940509550621264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13502,7 +13472,6 @@ GameObject:
   - component: {fileID: 5848940509550621267}
   - component: {fileID: 5848940509550621264}
   - component: {fileID: 5848940509550621228}
-  - component: {fileID: 5848940509550621231}
   - component: {fileID: 5848940509550621230}
   m_Layer: 5
   m_Name: MainCanvas
@@ -13780,7 +13749,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5848940509550621231}
+      - m_Target: {fileID: 1802080226}
         m_TargetAssemblyTypeName: HandAndMovement, Assembly-CSharp
         m_MethodName: HandTeleportationMovementType
         m_Mode: 1

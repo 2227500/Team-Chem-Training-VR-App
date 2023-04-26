@@ -94,27 +94,31 @@ public class StepsCategorisation : MonoBehaviour
         for (int i = 0; i < startstepThree.Length; i++)
         {
             int substepdone = 0;
+            for (int substep = 0; substep < startstepThree.Length; substep++)
+            {
+                if (startstepTwo[substep].isDone)
+                {
+                    Debug.Log("Substep two is done" + i);
+                    substepdone++;
+                }
 
-            if (startstepThree[i].isDone)
-            {
-                substepdone++;
-                Debug.Log("Step three is done");
-            }
-
-            if (substepdone == startstepOne.Length)
-            {
-                tabletUI.fullyOpenImage[2].color = Color.white;
-            }
-            else
-            {
-                tabletUI.fullyOpenImage[2].color = Color.red;
+                if (substepdone == startstepThree.Length)
+                {
+                    tabletUI.fullyOpenImage[2].color = Color.white;
+                }
+                else
+                {
+                    tabletUI.fullyOpenImage[2].color = Color.red;
+                }
             }
         }
     }
     #endregion
+
+
 }
 
-
+#if UNITY_EDITOR
 
 
 [CustomEditor(typeof(StepsCategorisation))]
@@ -127,3 +131,4 @@ public class ToolTipForClass : Editor
     }
 }
 
+#endif
