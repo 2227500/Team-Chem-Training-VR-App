@@ -18,7 +18,7 @@ public class KnobValueForText : MonoBehaviour
 
     private void Start()
     {
-        calculatedValues = new SingleEffectEvaporatorCalculation();
+        
         isDone = false;
     }
 
@@ -44,13 +44,23 @@ public class KnobValueForText : MonoBehaviour
 
     public void SteamValueChange()
     {
+        KnobeValue();
         calculatedValues.OnSteamFlowRateChanged(knobValueText.text);
         calculatedValues.UpdateValues();
+        Debug.Log(knobValueText.text);
     }
 
     public void FeedRateChange()
     {
-        calculatedValues.OnSteamFlowRateChanged(knob.value.ToString());
+        KnobeValue();
+        calculatedValues.OnFeedFlowRateChanged(knob.value.ToString());
+        calculatedValues.UpdateValues();
+    }
+
+    public void FeedConcentartionChange()
+    {
+        KnobeValue();
+        calculatedValues.OnFeedConcentrationChanged(knob.value.ToString());
         calculatedValues.UpdateValues();
     }
 }
