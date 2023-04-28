@@ -28,7 +28,7 @@ public class SingleEffectEvaporatorCalculation : MonoBehaviour
     private float _finalEvaporatedEnthalpy; // Final enthalpy of evaporated water
     private float _heatTransferRate; // Heat transfer rate in kW
 
-    public XRKnob steamKnob;
+  
     void Start()
     {
         UpdateValues();
@@ -96,14 +96,14 @@ public class SingleEffectEvaporatorCalculation : MonoBehaviour
         // Calculate heat transfer rate
         _heatTransferRate = _finalFeedEnthalpy - _initialFeedEnthalpy - _finalEvaporatedEnthalpy;
 
-        Debug.Log("Heat transfer rate: " + _heatTransferRate + " kW");
-        Debug.Log("Final Evaporated Enthalpy: " + _finalEvaporatedEnthalpy);
-        Debug.Log("Final Evaporated Mass: " + _finalEvaporatedMass);
-        Debug.Log("Final Feed Density: " + _finalFeedDensity);
-        Debug.Log("Final Feed Enthalpy: " + _finalFeedEnthalpy);
-        Debug.Log("Final Feed Mass: " + _finalFeedMass);
-        Debug.Log("Final Feed Specific Heat: " + _finalFeedSpecificHeat);
-        Debug.Log("Final Feed Volume: " + _finalFeedVolume);
+        //Debug.Log("Heat transfer rate: " + _heatTransferRate + " kW");
+        //Debug.Log("Final Evaporated Enthalpy: " + _finalEvaporatedEnthalpy);
+        //Debug.Log("Final Evaporated Mass: " + _finalEvaporatedMass);
+        //Debug.Log("Final Feed Density: " + _finalFeedDensity);
+        //Debug.Log("Final Feed Enthalpy: " + _finalFeedEnthalpy);
+        //Debug.Log("Final Feed Mass: " + _finalFeedMass);
+        //Debug.Log("Final Feed Specific Heat: " + _finalFeedSpecificHeat);
+        //Debug.Log("Final Feed Volume: " + _finalFeedVolume);
 
         // Update UI
         feedFlowRateText.text = "Feed flow rate: " + feedFlowRate.ToString("0.00") + " kg/hr";
@@ -111,5 +111,10 @@ public class SingleEffectEvaporatorCalculation : MonoBehaviour
         steamFlowRateText.text = "Steam flow rate: " + steamFlowRate.ToString("0.00") + " kg/hr";
         evaporationRateText.text = "Evaporation rate: " + evaporationRate.ToString("0.00") + " kg/hr";
         heatTransferRateText.text = "Heat transfer rate: " + _heatTransferRate.ToString("0.00") + " kW";
+    }
+
+    private void Update()
+    {
+        //UpdateValues();
     }
 }

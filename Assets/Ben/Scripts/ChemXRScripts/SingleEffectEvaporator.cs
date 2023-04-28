@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SingleEffectEvaporator : MonoBehaviour
 {
-    public float feedFlowRate = 100.0f; // Feed flow rate in kg/hr
-    public float feedConcentration = 0.05f; // Feed concentration in kg/kg
-    public float steamFlowRate = 20.0f; // Steam flow rate in kg/hr
-    public float evaporationRate = 0.05f; // Evaporation rate in kg/hr
+    public float feedFlowRate; // Feed flow rate in kg/hr
+    public float feedConcentration; // Feed concentration in kg/kg
+    public float steamFlowRate; // Steam flow rate in kg/hr
+    public float evaporationRate; // Evaporation rate in kg/hr
 
     private float _initialFeedMass; // Initial mass of feed
     private float _initialFeedVolume; // Initial volume of feed
