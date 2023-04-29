@@ -9,6 +9,8 @@ TagManager:
   - RightTeleportInteractor
   - LeftTeleportInteractor
   - TeleportArea
+  - Extinguisher
+  - Detected
   layers:
   - Default
   - TransparentFX
