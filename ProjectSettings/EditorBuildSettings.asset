@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/OnBoardingScene.unity
-    guid: 9a6cf20faa81b8e42afb2ed20f3a73cb
   - enabled: 1
+    path: Assets/Scenes/OnBoardingScene_Exp.unity
+    guid: 9a6cf20faa81b8e42afb2ed20f3a73cb
+  - enabled: 0
     path: Assets/Ben/Scene/OnBoardingBen.unity
     guid: 4b4f29a3ab0447347bffaccacdb4a0ed
   - enabled: 1
