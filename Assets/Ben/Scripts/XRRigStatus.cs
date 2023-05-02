@@ -5,6 +5,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class XRRigStatus : MonoBehaviour
@@ -44,3 +45,19 @@ public class XRRigStatus : MonoBehaviour
         }
     }
 }
+
+#if UNITY_EDITOR
+
+[CustomEditor(typeof(XRRigStatus))]
+public class ClassDescription : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        EditorGUILayout.LabelField("This script helps to enable the teleportaion area in the second scene. " +
+            " \n" + "And this script has to be attache dto the second scene.", GUILayout.MinHeight(50));
+        base.OnInspectorGUI();
+        
+    }
+}
+
+#endif
