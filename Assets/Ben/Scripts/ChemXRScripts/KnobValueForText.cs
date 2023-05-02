@@ -38,6 +38,7 @@ public class KnobValueForText : MonoBehaviour
     /// </summary>
     public void KnobeValue()
     {
+        //converting the value to the required decimals
         var value = 100f * knob.value;
         knobValueText.text = value.ToString();
         if ((knob.value == 1 && shouldOpenFully) || (knob.value >= 0.45f && shouldOpenPartially))
@@ -62,6 +63,7 @@ public class KnobValueForText : MonoBehaviour
 
     public void FeedRateChange()
     {
+        //call the method to update the knob value.
         KnobeValue();
         calculatedValues.OnFeedFlowRateChanged(knob.value.ToString());
         calculatedValues.UpdateValues();
@@ -70,6 +72,7 @@ public class KnobValueForText : MonoBehaviour
     public void FeedConcentartionChange()
     {
         KnobeValue();
+        //taking the knob rotation value for calculation.
         calculatedValues.OnFeedConcentrationChanged(knob.value.ToString());
         calculatedValues.UpdateValues();
     }
