@@ -1,7 +1,14 @@
-///Copywrite @ 2239356@swansea university
-///Date:05/03/2023
-///Author: Benadict Joseph
-///This script helps to enable the teleportation from the hand choice of the user.
+
+// /*--------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------
+// Creation Date: #DateTime#
+// Author: 2239356@swansea.ac.uk
+// Copywrite @ 2239356@swansea university
+// Description: ChemXR
+// This script helps to enable the teleportation from the hand choice of the user.
+// ----------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
