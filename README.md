@@ -1,5 +1,20 @@
-# Team-Chem-Training-VR-App
- 
+<img src="https://github.com/2239356Benadict/Assignment1/blob/main/swansea-university-2017.en.png" width="85" height="50">
+
+# ChemVR 
+
+ MSc VR group assignment for development of a VR Training application.
+
+### **Description**
+<p align="justify">
+
+
+
+### **Features**
+
+##### **OnBoardig**
+![alt text](https://github.com/2239356Benadict/Assignment1/blob/main/ChemVR_OnBoarding.png)
+
+
 # Unity Settings
 
 Project made with Unity 2021.3.17f
