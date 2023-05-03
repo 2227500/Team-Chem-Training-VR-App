@@ -15,10 +15,10 @@ MonoBehaviour:
   m_LayerNames:
   - Default
   - Telport Mask
-  - 
-  - 
-  - 
-  - 
+  - glove
+  - goggle
+  - helmet
+  - coat
   - 
   - 
   - 
