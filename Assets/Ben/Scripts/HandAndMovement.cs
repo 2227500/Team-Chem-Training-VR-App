@@ -1,7 +1,16 @@
-///Copywrite @ 2239356@swansea university
-///Date:05/03/2023
-///Author: Benadict Joseph
-///This script helps to store the choices made by user for dominant hand and movement type.
+
+// /*--------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------
+// Creation Date: #DateTime#
+// Author: 2239356@swansea.ac.uk
+// Copywrite @ 2239356@swansea university
+// Description: ChemXR
+// This script helps to store the choices made by user for dominant hand and movement type.
+// ----------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------*/
+
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
