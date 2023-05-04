@@ -14,7 +14,7 @@ public class PlayerSpawnPoint : MonoBehaviour
 
     public void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Respawn");
     }
     void Start()
     {

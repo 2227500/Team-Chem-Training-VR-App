@@ -20,13 +20,14 @@ public class XRRigStatus : MonoBehaviour
 
     private void Awake()
     {
-        sceneTeleportArea = GameObject.FindObjectOfType<TeleportationArea>();
+        //sceneTeleportArea = GameObject.FindObjectOfType<TeleportationArea>();
         xRRigStatus = GameObject.FindObjectOfType<CheckXRRigStatus>();
         Debug.Log("New Scene Loaded");
     }
 
     private void Start()
     {
+        xRRigStatus.IsTeleportMovementSelected();
         ActivateOrDeactiveteTeleportArea();
     }
 
@@ -37,10 +38,12 @@ public class XRRigStatus : MonoBehaviour
     {
         if (xRRigStatus.teleportMovementStatus)
         {
+            teleportationOpted = true;
             sceneTeleportArea.enabled = true;
         }
         else if (!xRRigStatus.teleportMovementStatus)
         {
+            teleportationOpted = false;
             sceneTeleportArea.enabled = false;
         }
     }

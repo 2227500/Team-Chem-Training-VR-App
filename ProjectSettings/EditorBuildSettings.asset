@@ -8,12 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OnBoardingScene_Exp.unity
     guid: 9a6cf20faa81b8e42afb2ed20f3a73cb
+  - enabled: 1
+    path: Assets/Scenes/Envorinment.unity
+    guid: 93ec666a44016234da597810cdb205d3
+  - enabled: 0
+    path: Assets/Scenes/LabScene.unity
+    guid: 0b08b2bcdf0769d49a4e96e35433e707
   - enabled: 0
     path: Assets/Ben/Scene/OnBoardingBen.unity
     guid: 4b4f29a3ab0447347bffaccacdb4a0ed
-  - enabled: 1
-    path: Assets/Scenes/LabScene.unity
-    guid: 0b08b2bcdf0769d49a4e96e35433e707
   - enabled: 0
     path: Assets/Chen/Environment.unity
     guid: fe8564e6405d5584fb2f939b65a06395
