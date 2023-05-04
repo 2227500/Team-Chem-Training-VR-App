@@ -12,6 +12,7 @@ TagManager:
   - Extinguisher
   - Detected
   - goggle
+  - Hand
   layers:
   - Default
   - TransparentFX
