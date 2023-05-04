@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-using UnityEngine;
+using UnityEngine.XR.Content.Interaction;
+using TMPro;
 
 public class HeatExchangerController : MonoBehaviour
 {
@@ -17,6 +17,16 @@ public class HeatExchangerController : MonoBehaviour
     private float heatTransferCoefficientE2 = 0.0f; // heat transfer coefficient for E2
     private float densityWater = 1000.0f; // density of water in kg/m^3
     private float specificHeatWater = 4180.0f; // specific heat of water in J/(kg*K)
+
+    public TextMeshPro tI1Value;
+    public TextMeshPro tI2Value;
+    public TextMeshPro tI3Value;
+    public TextMeshPro tI4Value;
+    public TextMeshPro tI5Value;
+    public TextMeshPro tI6Value;
+    //public TextMeshPro steamTemperatureValue;
+
+    public XRKnob steamKnobValue;
 
     void Start()
     {
@@ -40,14 +50,17 @@ public class HeatExchangerController : MonoBehaviour
 
     void CalculateWaterTemperatureOutE1()
     {
+
         // Calculate the temperature of the water at the outlet of E1 based on the steam temperature,
         // water flow rate, heat transfer coefficient of E1, and physical properties of water such as density
         // and specific heat.
+        
         float deltaT = steamTemperature - waterTemperatureInE1; // temperature difference between steam and water
         float q = waterFlowRate * densityWater * specificHeatWater * deltaT; // heat transferred from steam to water
         float uA = heatTransferCoefficientE1 * CalculateSurfaceAreaE1(); // overall heat transfer coefficient times surface area of E1
         float deltaTLogMean = CalculateLogMeanTemperatureDifferenceE1(deltaT); // log mean temperature difference for E1
         waterTemperatureOutE1 = waterTemperatureInE1 + q / (uA * deltaTLogMean); // calculate water temperature at the outlet of E1
+        tI2Value.text = waterTemperatureOutE1.ToString();
     }
 
     void CalculateWaterTemperatureOutE2()
@@ -75,7 +88,7 @@ public class HeatExchangerController : MonoBehaviour
     {
         // Control the steam flow rate using the input device.
         // This could involve using a valve in the 3D environment, or some other user interface element.
-        steamFlowRate = Input.GetAxis("SteamFlowRate"); // get the steam flow rate from the input device
+        steamFlowRate = steamKnobValue.value * 100f;  // get the steam flow rate from the input device
         // TODO: update the steam flow rate in the 3D environment based on the input device value
     }
 
@@ -103,7 +116,7 @@ public class HeatExchangerController : MonoBehaviour
         // This could involve using the dimensions of the heat exchanger, such as the length and diameter of
         // the tubes or the size of the heat transfer plates.
         // TODO: implement this function
-        return 0.0f;
+        return 20.0f;
     }
 
     float CalculateSurfaceAreaE2()
@@ -112,7 +125,7 @@ public class HeatExchangerController : MonoBehaviour
         // This could involve using the dimensions of the heat exchanger, such as the length and diameter of
         // the tubes or the size of the heat transfer plates.
         // TODO: implement this function
-        return 0.0f;
+        return 20.0f;
     }
 
     float CalculateLogMeanTemperatureDifferenceE1(float deltaT)
@@ -131,6 +144,12 @@ public class HeatExchangerController : MonoBehaviour
         // and diameter of the tubes or the size of the heat transfer plates.
         // TODO: implement this function
         return 0.0f;
+    }
+
+    public void DisplayTextUpdate()
+    {
+        tI1Value.text = waterTemperatureInE1.ToString();
+        //steamTemperatureValue.text = steamTemperature.ToString();
     }
 }
 

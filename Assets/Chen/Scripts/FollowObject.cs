@@ -5,9 +5,13 @@ public class FollowObject : MonoBehaviour
 {
     public Transform objectToFollow;
 
+    private void Awake()
+    {
+        objectToFollow = GameObject.FindGameObjectWithTag("MainCamera").transform;
+    }
     void Start()
     {
-      
+        
         transform.parent = objectToFollow;
     }
 
