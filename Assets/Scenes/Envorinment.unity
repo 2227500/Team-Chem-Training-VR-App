@@ -3693,8 +3693,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 1993425040}
-  offsetPosition: {x: -0.05, y: 0.02, z: 0.15}
-  offsetRotation: {x: 0, y: 0, z: 0}
 --- !u!114 &148172116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6507,8 +6505,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 695468459}
-  offsetPosition: {x: 0, y: 0, z: 0}
-  offsetRotation: {x: 0, y: 0, z: 0}
 --- !u!65 &230830147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14847,8 +14843,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 695468459}
-  offsetPosition: {x: 0, y: 0, z: 0}
-  offsetRotation: {x: 0, y: 0, z: 0}
 --- !u!1001 &514716896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16021,8 +16015,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 1037121381}
-  offsetPosition: {x: 0, y: 0.1, z: 0}
-  offsetRotation: {x: -90, y: 0, z: 0}
 --- !u!114 &554449144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18668,8 +18660,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 505330406}
-  offsetPosition: {x: 0, y: 1, z: 0}
-  offsetRotation: {x: 0, y: 0, z: 0}
 --- !u!1001 &666098655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29101,8 +29091,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 1295116616}
-  offsetPosition: {x: 0, y: 0, z: 0}
-  offsetRotation: {x: 0, y: 0, z: 0}
 --- !u!114 &1037121377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39043,8 +39031,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 505330406}
-  offsetPosition: {x: -0.05, y: 0.14, z: 0}
-  offsetRotation: {x: -90, y: 0, z: 0}
 --- !u!1001 &1348542582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50163,8 +50149,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 1905062815}
-  offsetPosition: {x: -0.05, y: -0.46, z: -0.15}
-  offsetRotation: {x: -27.8, y: 0, z: 0}
 --- !u!114 &1597605969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58882,8 +58866,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 695468459}
-  offsetPosition: {x: 0, y: 0, z: 0}
-  offsetRotation: {x: 0, y: 0, z: 0}
 --- !u!65 &1905062818
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60868,6 +60850,7 @@ GameObject:
   - component: {fileID: 1993425043}
   - component: {fileID: 1993425041}
   - component: {fileID: 1993425042}
+  - component: {fileID: 1993425046}
   m_Layer: 0
   m_Name: goggleSocket (1)
   m_TagString: Detected
@@ -60959,8 +60942,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 695468459}
-  offsetPosition: {x: 0, y: 0, z: 0}
-  offsetRotation: {x: 0, y: 0, z: 0}
 --- !u!65 &1993425043
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61024,6 +61005,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1993425039}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1993425046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993425039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e717218534701b41aa237e10d63e2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stuff: {fileID: 1556440156}
 --- !u!1 &1993535260
 GameObject:
   m_ObjectHideFlags: 0
@@ -61070,8 +61064,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 230830144}
-  offsetPosition: {x: -0.05, y: 0.14, z: 0}
-  offsetRotation: {x: -90, y: 0, z: 0}
 --- !u!114 &1993535263
 MonoBehaviour:
   m_ObjectHideFlags: 0
