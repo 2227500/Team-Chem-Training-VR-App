@@ -11616,7 +11616,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: eebdb7124d0981d46b3ecc2ead2bb4a0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eebdb7124d0981d46b3ecc2ead2bb4a0,
         type: 3}
@@ -14705,6 +14705,7 @@ GameObject:
   - component: {fileID: 505330407}
   - component: {fileID: 505330410}
   - component: {fileID: 505330411}
+  - component: {fileID: 505330412}
   m_Layer: 0
   m_Name: HelmetSocket
   m_TagString: Detected
@@ -14822,7 +14823,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 505330412}
+        m_TargetAssemblyTypeName: DisableScript, Assembly-CSharp
+        m_MethodName: DisableMyScript
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -14861,6 +14874,19 @@ MonoBehaviour:
   objectToFollow: {fileID: 695468459}
   offsetPosition: {x: 0, y: 0, z: 0}
   offsetRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &505330412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505330405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01df9a08133bcb43b1d8334c6c91b1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attach: {fileID: 1347370549}
 --- !u!1001 &514716896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18481,7 +18507,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1375133346}
-  - {fileID: 1765358165}
   - {fileID: 1956120387}
   - {fileID: 1584448265}
   m_Father: {fileID: 0}
@@ -29166,6 +29191,7 @@ GameObject:
   - component: {fileID: 1037121378}
   - component: {fileID: 1037121377}
   - component: {fileID: 1037121382}
+  - component: {fileID: 1037121383}
   m_Layer: 0
   m_Name: gloveSocketLeft
   m_TagString: Detected
@@ -29204,7 +29230,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1037121383}
+        m_TargetAssemblyTypeName: SocketedObject, Assembly-CSharp
+        m_MethodName: SetToFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -29323,6 +29361,19 @@ MonoBehaviour:
   offsetPosition: {x: 0, y: 0, z: 0}
   offsetRotation: {x: 85, y: 0, z: 0}
   hand: {fileID: 1844429777}
+--- !u!114 &1037121383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037121375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e717218534701b41aa237e10d63e2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stuff: {fileID: 413985500}
 --- !u!1001 &1038670030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29336,7 +29387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4218795038897600, guid: e4097125e459620458da5c4f281bad8f, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4218795038897600, guid: e4097125e459620458da5c4f281bad8f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -39123,7 +39174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 505330406}
-  offsetPosition: {x: -0.05, y: 0.14, z: 0}
+  offsetPosition: {x: -0.03, y: 0.14, z: 0}
   offsetRotation: {x: -90, y: 0, z: 0}
 --- !u!1001 &1348542582
 PrefabInstance:
@@ -42753,7 +42804,7 @@ PrefabInstance:
     - target: {fileID: 2774220344278030320, guid: 188450cf1b301924aa0875902fa97065,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 188450cf1b301924aa0875902fa97065,
         type: 3}
@@ -49866,7 +49917,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a5006ee77ebd8a142bd5c6d3302f98ef,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a5006ee77ebd8a142bd5c6d3302f98ef,
         type: 3}
@@ -51237,6 +51288,7 @@ GameObject:
   - component: {fileID: 1640628707}
   - component: {fileID: 1640628705}
   - component: {fileID: 1640628706}
+  - component: {fileID: 1640628710}
   m_Layer: 0
   m_Name: gloveSocketRight
   m_TagString: Detected
@@ -51291,7 +51343,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1640628710}
+        m_TargetAssemblyTypeName: SocketedObject, Assembly-CSharp
+        m_MethodName: SetToFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -51394,6 +51458,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640628703}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1640628710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640628703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e717218534701b41aa237e10d63e2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stuff: {fileID: 413985500}
 --- !u!1001 &1644804775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55417,7 +55494,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 656807090}
+    m_TransformParent: {fileID: 1956120387}
     m_Modifications:
     - target: {fileID: -6689036041284674117, guid: 6d1d781307da1024591c5040f10df110,
         type: 3}
@@ -55427,17 +55504,17 @@ PrefabInstance:
     - target: {fileID: 2774220344278030320, guid: 6d1d781307da1024591c5040f10df110,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 6d1d781307da1024591c5040f10df110,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.10000003
+      value: 0.10000004
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 6d1d781307da1024591c5040f10df110,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.10000003
+      value: 0.10000004
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 6d1d781307da1024591c5040f10df110,
         type: 3}
@@ -55447,7 +55524,7 @@ PrefabInstance:
     - target: {fileID: 2774220344278030320, guid: 6d1d781307da1024591c5040f10df110,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.1690001
+      value: -2.1130004
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 6d1d781307da1024591c5040f10df110,
         type: 3}
@@ -59049,6 +59126,7 @@ GameObject:
   - component: {fileID: 1905062818}
   - component: {fileID: 1905062816}
   - component: {fileID: 1905062817}
+  - component: {fileID: 1905062821}
   m_Layer: 0
   m_Name: coatSocket (1)
   m_TagString: Detected
@@ -59103,7 +59181,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1905062821}
+        m_TargetAssemblyTypeName: SocketedObject, Assembly-CSharp
+        m_MethodName: SetToFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -59205,6 +59295,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905062814}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1905062821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905062814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e717218534701b41aa237e10d63e2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stuff: {fileID: 5950556792576992645}
 --- !u!1001 &1915963935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60613,12 +60716,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1765358165}
   - {fileID: 1038670031}
   - {fileID: 1515616794}
   - {fileID: 5509478919978434793}
   - {fileID: 413985499}
   m_Father: {fileID: 656807090}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1964215715
 PrefabInstance:
@@ -61126,6 +61230,7 @@ GameObject:
   - component: {fileID: 1993425043}
   - component: {fileID: 1993425041}
   - component: {fileID: 1993425042}
+  - component: {fileID: 1993425046}
   m_Layer: 0
   m_Name: goggleSocket (1)
   m_TagString: Detected
@@ -61180,7 +61285,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1993425046}
+        m_TargetAssemblyTypeName: SocketedObject, Assembly-CSharp
+        m_MethodName: SetToFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -61282,6 +61399,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1993425039}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1993425046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993425039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e717218534701b41aa237e10d63e2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stuff: {fileID: 1556440156}
 --- !u!1 &1993535260
 GameObject:
   m_ObjectHideFlags: 0
@@ -66499,7 +66629,7 @@ Transform:
   m_Children:
   - {fileID: 305097930}
   m_Father: {fileID: 1956120387}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -90, y: 92.01, z: 0}
 --- !u!1 &5950556792576992645
 GameObject:
