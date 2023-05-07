@@ -13,10 +13,10 @@ public class HeatExchangerController : MonoBehaviour
     public float waterTemperatureOutE1 = 0.0f; // initial water temperature at the outlet of E1
     public float waterTemperatureOutE2 = 0.0f; // initial water temperature at the outlet of E2
 
-    private float heatTransferCoefficientE1 = 0.0f; // heat transfer coefficient for E1
-    private float heatTransferCoefficientE2 = 0.0f; // heat transfer coefficient for E2
-    private float densityWater = 1000.0f; // density of water in kg/m^3
-    private float specificHeatWater = 4180.0f; // specific heat of water in J/(kg*K)
+    public float heatTransferCoefficientE1; // heat transfer coefficient for E1
+    public float heatTransferCoefficientE2 = 0.0f; // heat transfer coefficient for E2
+    public float densityWater = 1000.0f; // density of water in kg/m^3
+    public float specificHeatWater = 4180.0f; // specific heat of water in J/(kg*K)
 
     public TextMeshPro tI1Value;
     public TextMeshPro tI2Value;
@@ -27,28 +27,31 @@ public class HeatExchangerController : MonoBehaviour
     //public TextMeshPro steamTemperatureValue;
 
     public XRKnob steamKnobValue;
+    public XRKnob waterKnobValue;
 
     void Start()
     {
-        // Initialize the heat transfer coefficients for E1 and E2 based on the
-        // specific design and geometry of the heat exchangers.
-        heatTransferCoefficientE1 = CalculateHeatTransferCoefficientE1();
-        heatTransferCoefficientE2 = CalculateHeatTransferCoefficientE2();
+        //// Initialize the heat transfer coefficients for E1 and E2 based on the
+        //// specific design and geometry of the heat exchangers.
+        //heatTransferCoefficientE1 = CalculateHeatTransferCoefficientE1();
+        //heatTransferCoefficientE2 = CalculateHeatTransferCoefficientE2();
     }
 
     void Update()
     {
-        // Calculate the temperature values for each heat exchanger and display them
-        // in the VR UI.
-        CalculateWaterTemperatureOutE1();
-        CalculateWaterTemperatureOutE2();
-        DisplayTemperatures();
+        // Calculate the temperature values for each heat exchanger and display them in the VR UI.
 
+
+        CalculateWaterTemperatureOutE1();
+        //CalculateWaterTemperatureOutE2();
+        //DisplayTemperatures();
+        DisplayTextUpdate();
         // Control the steam flow rate using the input device.
         ControlSteamFlowRate();
+        WaterFlowRate();
     }
 
-    void CalculateWaterTemperatureOutE1()
+    public void CalculateWaterTemperatureOutE1()
     {
 
         // Calculate the temperature of the water at the outlet of E1 based on the steam temperature,
@@ -57,13 +60,20 @@ public class HeatExchangerController : MonoBehaviour
         
         float deltaT = steamTemperature - waterTemperatureInE1; // temperature difference between steam and water
         float q = waterFlowRate * densityWater * specificHeatWater * deltaT; // heat transferred from steam to water
-        float uA = heatTransferCoefficientE1 * CalculateSurfaceAreaE1(); // overall heat transfer coefficient times surface area of E1
+        float uA = heatTransferCoefficientE1 * 33.3f; //CalculateSurfaceAreaE1(); // overall heat transfer coefficient times surface area of E1
         float deltaTLogMean = CalculateLogMeanTemperatureDifferenceE1(deltaT); // log mean temperature difference for E1
         waterTemperatureOutE1 = waterTemperatureInE1 + q / (uA * deltaTLogMean); // calculate water temperature at the outlet of E1
         tI2Value.text = waterTemperatureOutE1.ToString();
+
+        Debug.Log("DeltaT : " + deltaT);
+        Debug.Log("Heat transferred (q): " + q);
+        Debug.Log(heatTransferCoefficientE1);
+        Debug.Log("uA : " + uA);
+        Debug.Log("Log mean temperature: " + deltaTLogMean);
+        Debug.Log("WaterTemperatureOutE1: " + waterTemperatureOutE1);
     }
 
-    void CalculateWaterTemperatureOutE2()
+    public void CalculateWaterTemperatureOutE2()
     {
         // Calculate the temperature of the water at the outlet of E2 based on the water
         // flow rate, heat transfer coefficient of E2, and physical properties of water.
@@ -88,7 +98,16 @@ public class HeatExchangerController : MonoBehaviour
     {
         // Control the steam flow rate using the input device.
         // This could involve using a valve in the 3D environment, or some other user interface element.
-        steamFlowRate = steamKnobValue.value * 100f;  // get the steam flow rate from the input device
+        steamFlowRate = steamKnobValue.value * 10f;  // get the steam flow rate from the input device
+        //Debug.Log("Steam FLow Rate: " + steamFlowRate);
+        // TODO: update the steam flow rate in the 3D environment based on the input device value
+    }
+    void WaterFlowRate()
+    {
+        // Control the steam flow rate using the input device.
+        // This could involve using a valve in the 3D environment, or some other user interface element.
+        waterFlowRate = waterKnobValue.value * 10f;  // get the steam flow rate from the input device
+        //Debug.Log("Steam FLow Rate: " + steamFlowRate);
         // TODO: update the steam flow rate in the 3D environment based on the input device value
     }
 
@@ -116,7 +135,7 @@ public class HeatExchangerController : MonoBehaviour
         // This could involve using the dimensions of the heat exchanger, such as the length and diameter of
         // the tubes or the size of the heat transfer plates.
         // TODO: implement this function
-        return 20.0f;
+        return 33.3f;
     }
 
     float CalculateSurfaceAreaE2()
@@ -134,6 +153,7 @@ public class HeatExchangerController : MonoBehaviour
         // the steam and water and the dimensions of the heat exchanger. This could involve using the length
         // and diameter of the tubes or the size of the heat transfer plates.
         // TODO: implement this function
+        float dt1 = steamTemperature - waterTemperatureInE1;
         return 0.0f;
     }
 
