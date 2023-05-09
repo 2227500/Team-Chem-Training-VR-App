@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterWobble
+  m_Name: WaterTK1
   m_Shader: {fileID: -6465566751694194690, guid: 1ccb9c34a2d73c04d945693b1d7c5186,
     type: 3}
   m_ValidKeywords: []
@@ -48,12 +48,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FillAmount: 1
+    - _FillAmount: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _WobbleX: 0
     - _WobbleZ: 0
     m_Colors:
-    - _SideColor: {r: 0, g: 0.27813074, b: 0.7529412, a: 1}
-    - _TopColor: {r: 0.13157704, g: 0.43644744, b: 0.9056604, a: 1}
+    - _SideColor: {r: 0.0991034, g: 0.1396457, b: 0.20834237, a: 1}
+    - _TopColor: {r: 0.34607512, g: 0.4867217, b: 0.7264151, a: 1}
   m_BuildTextureStacks: []
