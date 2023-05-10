@@ -158,6 +158,7 @@ public class ChemQuiz : MonoBehaviour
         // Wait for a brief moment before starting the fade in animation
         yield return new WaitForSeconds(1.0f);
 
+        // Update
     }
 }
 
