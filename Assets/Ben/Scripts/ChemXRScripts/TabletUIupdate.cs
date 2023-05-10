@@ -22,6 +22,8 @@ public class TabletUIupdate : MonoBehaviour
     public XRKnob[] partiallyOpenXRKnob;
     public Image[] partiallyOpenImage;
 
+    
+
     private void Update()
     {
         FullyOpenKnobStatus();

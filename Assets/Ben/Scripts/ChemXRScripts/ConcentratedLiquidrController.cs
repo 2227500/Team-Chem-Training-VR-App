@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Content.Interaction;
 
-public class WaterController : MonoBehaviour
+public class ConcentratedLiquidrController : MonoBehaviour
 {
     public Material waterWobble;
     public Renderer waterWobbleRenderer;
@@ -15,11 +15,11 @@ public class WaterController : MonoBehaviour
 
     private void Update()
     {
-        WaterLevelChange(heatExchanger.steamKnobValue.value);
+        ConcLiquidLevelChange(heatExchanger.concLiquidFlowRate);
     }
 
 
-    public void WaterLevelChange(float waterLevel)
+    public void ConcLiquidLevelChange(float waterLevel)
     {
         waterWobble.SetFloat("_FillAmount", waterLevel);
         //Debug.Log(waterFlowXRKnob.value);

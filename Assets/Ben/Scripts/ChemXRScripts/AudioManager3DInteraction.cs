@@ -25,6 +25,8 @@ public class AudioManager3DInteraction : MonoBehaviour
         if(other.tag == "Player")
         {
             instructionAudioSource[0].Stop();
+            instructionAudioSource[1].Stop();
+            instructionAudioSource[2].Stop();
             
         }
     }
