@@ -31,7 +31,7 @@ public class AirTableStudent : MonoBehaviour
     public void SavePlayerName()
     {
         playerName = playerNameInputField.text;
-        StartCoroutine("LogRecordOnAirtable");
+        //StartCoroutine("LogRecordOnAirtable");
     }
 
     public void LoadPlayerName()
