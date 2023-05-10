@@ -15,7 +15,7 @@ public class EnablingGameObject : MonoBehaviour
 
     private void Start()
     {
-        colliderOfGO = gameObject.GetComponent<BoxCollider>();
+        //colliderOfGO = gameObject.GetComponent<BoxCollider>();
         infoPanel.SetActive(false);
     }
 

@@ -116,11 +116,11 @@ public class SingleEffectEvaporatorCalculation : MonoBehaviour
         //Debug.Log("Final Feed Volume: " + _finalFeedVolume);
 
         // Update UI
-        feedFlowRateText.text = "Feed flow rate: " + feedFlowRate.ToString("0.00") + " kg/hr";
-        feedConcentrationText.text = "Feed concentration: " + (feedConcentration * 100.0f).ToString("0.00") + " %";
-        steamFlowRateText.text = "Steam flow rate: " + steamFlowRate.ToString("0.00") + " kg/hr";
-        evaporationRateText.text = "Evaporation rate: " + evaporationRate.ToString("0.00") + " kg/hr";
-        heatTransferRateText.text = "Heat transfer rate: " + _heatTransferRate.ToString("0.00") + " kW";
+        feedFlowRateText.text = feedFlowRate.ToString("0.00") + " kg/hr";
+        feedConcentrationText.text = (feedConcentration * 100.0f).ToString("0.00") + " %";
+        steamFlowRateText.text = steamFlowRate.ToString("0.00"); // + " kg/hr";
+        evaporationRateText.text =  evaporationRate.ToString("0.00") + " kg/hr";
+        heatTransferRateText.text =  _heatTransferRate.ToString("0.00") + " kW";
     }
 
     private void Update()

@@ -7,20 +7,21 @@ public class WaterController : MonoBehaviour
 {
     public Material waterWobble;
     public Renderer waterWobbleRenderer;
-    public XRKnob waterFlowXRKnob;
+    //public XRKnob waterFlowXRKnob;
 
     public float waterLevel;
 
+    public HeatExchangerController heatExchanger;
 
     private void Update()
     {
-        WaterLevelChange(waterFlowXRKnob.value);
+        WaterLevelChange(heatExchanger.steamKnobValue.value);
     }
 
 
     public void WaterLevelChange(float waterLevel)
     {
         waterWobble.SetFloat("_FillAmount", waterLevel);
-        Debug.Log(waterFlowXRKnob.value);
+        //Debug.Log(waterFlowXRKnob.value);
     }
 }

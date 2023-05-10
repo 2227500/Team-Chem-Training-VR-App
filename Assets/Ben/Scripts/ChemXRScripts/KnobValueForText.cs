@@ -19,13 +19,15 @@ public class KnobValueForText : MonoBehaviour
     public XRKnob knob;
     public Text knobValueText;
     public SingleEffectEvaporatorCalculation calculatedValues;
-
+    public XRLever pumbSwitch1;
+    public XRLever pumbSwitch2;
     public bool shouldOpenFully; // bool has to be true if the valve is supposed to open fully
     public bool shouldOpenPartially; // bool has to be true if the valve is supposed to open partially
     public Outline leverOutlineColor;
 
     public bool isDone;
 
+    
     private void Start()
     {
         
@@ -53,6 +55,8 @@ public class KnobValueForText : MonoBehaviour
         }
     }
 
+    
+
     public void SteamValueChange()
     {
         KnobeValue();
@@ -70,6 +74,14 @@ public class KnobValueForText : MonoBehaviour
     }
 
     public void FeedConcentartionChange()
+    {
+        KnobeValue();
+        //taking the knob rotation value for calculation.
+        calculatedValues.OnFeedConcentrationChanged(knob.value.ToString());
+        calculatedValues.UpdateValues();
+    }
+
+    public void V1()
     {
         KnobeValue();
         //taking the knob rotation value for calculation.

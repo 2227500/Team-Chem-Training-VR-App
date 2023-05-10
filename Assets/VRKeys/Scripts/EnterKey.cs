@@ -13,13 +13,17 @@ using System.Collections;
 
 namespace VRKeys {
 
+	
 	/// <summary>
 	/// Enter key that calls Submit() on the keyboard.
 	/// </summary>
 	public class EnterKey : Key {
 
+		public BoxCollider wallColliderToDisable;
+
 		public override void HandleTriggerEnter (Collider other) {
 			keyboard.Submit ();
+			wallColliderToDisable.enabled = false;
 		}
 
 		public override void UpdateLayout (Layout translation) {
