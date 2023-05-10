@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class AirTableValues : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void LoadPlayerData()
     {
-        
+        StartCoroutine("LoadPlayerNameCoroutine");
     }
-
-    // Update is called once per frame
-    void Update()
+    //calls custom load info function in airtableController and waits 1 second for response from airtable server before setting playerName to airtable value
+    public IEnumerator LoadPlayerNameCoroutine()
     {
-        
+        airtableController.LoadPlayerInfo();
+        yield return new WaitForSeconds(1f);
+        playerNameInputField.text = playerName;
     }
 }
