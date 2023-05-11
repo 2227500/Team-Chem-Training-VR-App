@@ -22,6 +22,8 @@ public class ChemQuiz : MonoBehaviour
     public Button Button3;
     public Button Button4;
 
+    public GameObject ButtonEnd;
+
     private int currentQuestion = 0;
 
     public GameObject prefab1;
@@ -140,6 +142,8 @@ public class ChemQuiz : MonoBehaviour
             gameObject.SetActive(false);
             timer.ToggleTimer();
             timer.SavePlayerTime();
+            ButtonEnd.SetActive(true);
+
         }
         else
         {
