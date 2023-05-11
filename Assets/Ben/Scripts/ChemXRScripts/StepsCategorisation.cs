@@ -12,6 +12,7 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEditor;
 using UnityEngine.XR.Content.Interaction;
 
@@ -37,6 +38,9 @@ public class StepsCategorisation : MonoBehaviour
     public KnobValueForText[] startstepSixteen;
     public KnobValueForText[] startstepSeventeen;
 
+    public GameObject stepSixButton;
+    public GameObject stepNineButton;
+
     public XRLever pumbSwitch1;
     public XRLever pumbSwitch2;
 
@@ -48,6 +52,12 @@ public class StepsCategorisation : MonoBehaviour
     private bool isStepOneDone, isStepTwoDone, isStepThreeDone, isStepFourDOne, isStepFiveDOne, isStepSixDone, isStepSevenDone, isStepEightDone, isStepNineDone, isStepTenDone, isStepElevenDone, isStepTwelveDone, isStepThirteenDone, isStepFourteenDone, isStepFifteenDone, isStepSixteenDone; 
 
     public TabletUIupdate tabletUI;
+
+    private void Start()
+    {
+        stepSixButton.SetActive(false);
+        stepNineButton.SetActive(false);
+    }
 
     private void Update()
     {
@@ -293,6 +303,7 @@ public class StepsCategorisation : MonoBehaviour
     {
         if (isStepFiveDOne)
         {
+            stepSixButton.SetActive(true);
             // Outline is getting enabled
             for (int i = 0; i < startstepSix.Length; i++)
             {
@@ -337,6 +348,7 @@ public class StepsCategorisation : MonoBehaviour
     {
         if (isStepSixDone)
         {
+            stepSixButton.SetActive(false);
             // Outline is getting enabled
             for (int i = 0; i < startstepSeven.Length; i++)
             {
@@ -426,6 +438,7 @@ public class StepsCategorisation : MonoBehaviour
     {
         if (isStepEightDone)
         {
+            stepNineButton.SetActive(true);
             // Outline is getting enabled
             for (int i = 0; i < startstepNine.Length; i++)
             {
@@ -434,6 +447,7 @@ public class StepsCategorisation : MonoBehaviour
         }
         else
         {
+            stepNineButton.SetActive(false);
             // Outline is getting disabled
             for (int i = 0; i < startstepNine.Length; i++)
             {
@@ -471,6 +485,7 @@ public class StepsCategorisation : MonoBehaviour
     {
         if (isStepNineDone)
         {
+            stepNineButton.SetActive(false);
             // Outline is getting enabled
             for (int i = 0; i < startstepTen.Length; i++)
             {
@@ -492,7 +507,7 @@ public class StepsCategorisation : MonoBehaviour
             for (int substep = 0; substep < startstepTen.Length; substep++)
             {
                 
-                if (!pumbSwitch1.value)
+                if (!pumbSwitch2.value)
                 {
                     tabletUI.fullyOpenImage[9].color = Color.white;
                     totalStepsDone = 10;
@@ -717,6 +732,7 @@ public class StepsCategorisation : MonoBehaviour
                     tabletUI.fullyOpenImage[14].color = Color.white;
                     totalStepsDone = 15;
                     isStepFifteenDone = true;
+                    Debug.Log("pumpswitch2 " + pumbSwitch2.value);
                 }
                 else
                 {
@@ -771,9 +787,24 @@ public class StepsCategorisation : MonoBehaviour
         }
     }
 
+    #endregion
+
+    public void StepSixDone()
+    {
+        isStepSixDone = true;
+        totalStepsDone = 6;
+
+    }
+
+    public void StepNineDone()
+    {
+        isStepNineDone = true;
+        totalStepsDone = 9;
+
+    }
+
     public GameObject startUpCompleted;
 
-    #endregion
 
     #region StartUpCompletionCelebration
     public void AllStepsDoneOrNot()

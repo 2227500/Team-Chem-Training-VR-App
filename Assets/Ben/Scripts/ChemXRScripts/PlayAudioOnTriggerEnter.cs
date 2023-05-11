@@ -13,4 +13,11 @@ public class PlayAudioOnTriggerEnter : MonoBehaviour
             source.Play();
         }
     }
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            source.Stop();
+        }
+    }
 }
