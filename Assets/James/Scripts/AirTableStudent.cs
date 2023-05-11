@@ -15,20 +15,19 @@ public class AirTableStudent : MonoBehaviour
     public UpdateRecordExample updateRecordExample;
 
     [Header("Player Name")]
-    public TMP_Text playerNameInputField;
+    public TextMeshProUGUI playerNameInputField;
     public TMP_Text playerNameFeedback;
     public string playerName;
 
     public string bigName;
+    //public Keyboard textStudentNumber;
+    //[Header("Game Data")]
+    //public TMP_InputField timePlayedInputField;
+    //public TMP_InputField scoreInputField;
+    //public string timePlayed;
+    //public string score;
 
-    [Header("Game Data")]
-    public TMP_InputField timePlayedInputField;
-    public TMP_InputField scoreInputField;
-    public string timePlayed;
-    public string score;
-
-    //public Keyboard data;
-
+    
     //sets playerName variable to input fields value, then calls custom function from airtable controller
     public void SavePlayerName()
     {
@@ -36,41 +35,41 @@ public class AirTableStudent : MonoBehaviour
         //StartCoroutine("LogRecordOnAirtable");
     }
 
-    public void LoadPlayerName()
-    {
-        StartCoroutine("LoadPlayerNameCoroutine");
-    }
+    //public void LoadPlayerName()
+    //{
+    //    StartCoroutine("LoadPlayerNameCoroutine");
+    //}
 
     //sets playerName
-    public void SavePlayerData()
-    {
-        playerName = playerNameInputField.text;
-    }
+    //public void SavePlayerData()
+    //{
+    //    playerName = playerNameInputField.text;
+    //}
 
-    public void LoadPlayerData()
-    {
-        StartCoroutine("LoadPlayerNameCoroutine");
-    }
+    //public void LoadPlayerData()
+    //{
+    //    StartCoroutine("LoadPlayerNameCoroutine");
+    //}
 
-    //calls custom load info function in airtableController and waits 1 second for response from airtable server before setting playerName to airtable value
-    public IEnumerator LoadPlayerNameCoroutine()
-    {
-        yield return new WaitForSeconds(1f);
-        playerNameInputField.text = playerName;
-    }
+    ////calls custom load info function in airtableController and waits 1 second for response from airtable server before setting playerName to airtable value
+    //public IEnumerator LoadPlayerNameCoroutine()
+    //{
+    //    yield return new WaitForSeconds(1f);
+    //    playerNameInputField.text = playerName;
+    //}
 
     //sets timePlayed value to what is in the input field (used by inputFields "onEndEdit" event)
-    public void UpdateTimePlayedValue()
-    {
-        timePlayed = timePlayedInputField.text;
-    }
+    //public void UpdateTimePlayedValue()
+    //{
+    //    timePlayed = timePlayedInputField.text;
+    //}
 
 
     //sets score value to what is in the input field (used by inputFields "onEndEdit" event)
-    public void UpdateScoreValue()
-    {
-        score = scoreInputField.text;
-    }
+    //public void UpdateScoreValue()
+    //{
+    //    score = scoreInputField.text;
+    //}
 
     // Update is called once per frame
     public void LogRecordOnAirtable()
@@ -78,7 +77,7 @@ public class AirTableStudent : MonoBehaviour
         createRecord.TableName = tableName;
         createRecord.NewRecordJson =
                                     "{\"fields\": {" +
-                                    "\"Student Number\":\"" + playerName + "\"" +
+                                    "\"Student\":\"" + playerName + "\"" +
                                     "}}";
         createRecord.CreateAirtableRecord();
     }

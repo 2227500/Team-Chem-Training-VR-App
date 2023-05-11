@@ -1536,7 +1536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &560374914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1567,6 +1567,7 @@ MonoBehaviour:
     type: 3}
   prefab4: {fileID: -6689036041284674117, guid: 8a72599595197aa4a80243c42f89b5a5,
     type: 3}
+  timer: {fileID: 0}
   score: 0
 --- !u!114 &560374915
 MonoBehaviour:
@@ -1874,8 +1875,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1745540058}
-        m_TargetAssemblyTypeName: AirtableManager, Assembly-CSharp
+      - m_Target: {fileID: 1492113774}
+        m_TargetAssemblyTypeName: AirTableUpload, Assembly-CSharp
         m_MethodName: LogRecordOnAirtable
         m_Mode: 1
         m_Arguments:
@@ -3438,10 +3439,6 @@ MonoBehaviour:
   playerNameFeedback: {fileID: 0}
   playerName: 
   bigName: 
-  timePlayedInputField: {fileID: 0}
-  scoreInputField: {fileID: 0}
-  timePlayed: 
-  score: 
 --- !u!114 &1024575451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4466,7 +4463,7 @@ MonoBehaviour:
   updateRecordExample: {fileID: 1645950129}
   student: {fileID: 1024575450}
   time: {fileID: 1024575451}
-  quiz: {fileID: 560374914}
+  quiz: {fileID: 0}
   values: {fileID: 0}
 --- !u!1001 &1562860319
 PrefabInstance:

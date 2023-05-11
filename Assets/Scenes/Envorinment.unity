@@ -8028,10 +8028,6 @@ MonoBehaviour:
   playerNameFeedback: {fileID: 0}
   playerName: 
   bigName: 
-  timePlayedInputField: {fileID: 0}
-  scoreInputField: {fileID: 0}
-  timePlayed: 
-  score: 
 --- !u!4 &219838140
 Transform:
   m_ObjectHideFlags: 0
@@ -19868,6 +19864,7 @@ GameObject:
   m_Component:
   - component: {fileID: 497855896}
   - component: {fileID: 497855897}
+  - component: {fileID: 497855898}
   m_Layer: 0
   m_Name: AirTableSend
   m_TagString: Untagged
@@ -19909,6 +19906,21 @@ MonoBehaviour:
   time: {fileID: 219838138}
   quiz: {fileID: 998177415}
   values: {fileID: 1162026910}
+  number: {fileID: 497855898}
+--- !u!114 &497855898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497855895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17f31338a6054848846def2e0c93063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboard: {fileID: 114000012575066521}
+  studentNumber: 
 --- !u!1001 &498148454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21184,6 +21196,7 @@ GameObject:
   - component: {fileID: 530574616}
   - component: {fileID: 530574615}
   - component: {fileID: 530574614}
+  - component: {fileID: 530574618}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -21273,6 +21286,25 @@ RectTransform:
   m_AnchoredPosition: {x: 394.2, y: 177}
   m_SizeDelta: {x: 788.4, y: 354}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &530574618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530574613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
 --- !u!1001 &533587249
 PrefabInstance:
   m_ObjectHideFlags: 0
