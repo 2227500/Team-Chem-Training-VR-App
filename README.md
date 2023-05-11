@@ -6,7 +6,9 @@
 
 ### **Description**
 <p align="justify">
-
+Solvent removal is an essential process across a broad range of applications in the pharmaceutical, chemical, and biotechnology industries. An evaporator is an industrial process designed to concentrate feed liquors such as fruit juice, milk products, aqueous salt solutions etc. In this experiment the manual single effect evaporator uses steam as the heating media and water as the process fluid. The purpose of the experiment is to study the effects of varying the process parameters on the evaporator performance.
+Evaporators do not always operate at atmospheric pressure. The evaporator capacity (or the rate of evaporation) is dependent upon the temperature driving force, that is, the temperature difference between the steam and the boiling point of the evaporator feed liquor. Increasing the temperature difference increases the evaporator capacity. Therefore, for a given duty, heat transfer would be reduced and hence the equipment will cost less. By adding a condenser and vacuum pump, the pressure in the evaporator can be made less than atmospheric. As a result, the liquor will boil at a lower temperature and hence, the temperature difference is increased. In industry vacuum operation is common and is of particular benefit with heat sensitive products, such as fruit juice or milk, which either decompose or react when heated to their normal (atmospheric) boiling temperature (Note: Do not confuse “reduced operating pressure” with “reduced steam pressure”).
+In this VR application we have tried to recreate the experiment in the Virtual Reality environment so that students can repeatedly experiment and understand the procedures.
 
 
 ### **Features**
@@ -14,7 +16,12 @@
 ##### **OnBoardig**
 ![alt text](https://github.com/2239356Benadict/Assignment1/blob/main/ChemVR_OnBoarding.png)
 
+##### **Safety Room**
+![alt text](https://github.com/2239356Benadict/Assignment1/blob/main/safetyroom.png)
 
+##### **Laboratory Room**
+![alt text](https://github.com/2239356Benadict/Assignment1/blob/main/lab.png)
+ 
 # Unity Settings
 
 Project made with Unity 2021.3.17f
