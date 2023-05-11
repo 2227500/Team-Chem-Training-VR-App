@@ -29,6 +29,8 @@ public class ChemQuiz : MonoBehaviour
     public GameObject prefab3;
     public GameObject prefab4;
 
+    public AirTableTime timer;
+
     //public GameObject prefab5;
     //public GameObject prefab6;
     //public GameObject prefab7;
@@ -136,6 +138,8 @@ public class ChemQuiz : MonoBehaviour
         if (currentQuestion > 14)
         {
             gameObject.SetActive(false);
+            timer.ToggleTimer();
+            timer.SavePlayerTime();
         }
         else
         {

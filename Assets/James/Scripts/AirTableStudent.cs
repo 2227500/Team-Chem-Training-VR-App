@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
+using VRKeys;
 
 public class AirTableStudent : MonoBehaviour
 {
@@ -13,7 +15,7 @@ public class AirTableStudent : MonoBehaviour
     public UpdateRecordExample updateRecordExample;
 
     [Header("Player Name")]
-    public TMP_InputField playerNameInputField;
+    public TMP_Text playerNameInputField;
     public TMP_Text playerNameFeedback;
     public string playerName;
 
@@ -25,7 +27,7 @@ public class AirTableStudent : MonoBehaviour
     public string timePlayed;
     public string score;
 
-
+    //public Keyboard data;
 
     //sets playerName variable to input fields value, then calls custom function from airtable controller
     public void SavePlayerName()
