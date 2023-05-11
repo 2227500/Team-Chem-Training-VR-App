@@ -20,10 +20,18 @@ namespace VRKeys {
 	public class EnterKey : Key {
 
 		public BoxCollider wallColliderToDisable;
+		public GameObject uIToDisable;
 
-		public override void HandleTriggerEnter (Collider other) {
+        public void Start()
+        {
+			wallColliderToDisable.enabled = true;
+			uIToDisable.SetActive(true);
+        }
+
+        public override void HandleTriggerEnter (Collider other) {
 			keyboard.Submit ();
 			wallColliderToDisable.enabled = false;
+			uIToDisable.SetActive(false);
 		}
 
 		public override void UpdateLayout (Layout translation) {

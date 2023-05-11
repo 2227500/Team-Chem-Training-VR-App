@@ -10,7 +10,7 @@ using System.Collections;
 public class PlayerSpawnPoint : MonoBehaviour
 {
     public GameObject player;
- 
+    public Vector3 rotateOffset;
 
     public void Awake()
     {
@@ -19,6 +19,7 @@ public class PlayerSpawnPoint : MonoBehaviour
     void Start()
     {
         player.GetComponent<Transform>().position = gameObject.transform.position;
+         
     }
 
 

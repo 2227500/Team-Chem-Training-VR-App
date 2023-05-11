@@ -32,9 +32,24 @@ public class KnobValueForText : MonoBehaviour
     {
         
         isDone = false;
+
+        
     }
 
+    public void NullBugFix()
+    {
+        if(pumbSwitch1 == null)
+        {
+            Debug.Log("Pump switch one");
+        }
+        if(pumbSwitch2 == null)
+        {
+            Debug.Log("Pump swaict one not assigned");
+        }
+        
 
+        
+    }
     /// <summary>
     /// Method to check the value of knob and convert it to the required ratio.
     /// </summary>
@@ -42,7 +57,7 @@ public class KnobValueForText : MonoBehaviour
     {
         //converting the value to the required decimals
         var value = 100f * knob.value;
-        knobValueText.text = value.ToString();
+        knobValueText.text = value.ToString("f2");
         if ((knob.value == 1 && shouldOpenFully) || (knob.value >= 0.45f && shouldOpenPartially))
         {
             leverOutlineColor.OutlineColor = Color.green; //once knob fully open or partially open the outline color changes to green.
