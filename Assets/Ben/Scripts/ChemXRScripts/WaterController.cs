@@ -15,7 +15,7 @@ public class WaterController : MonoBehaviour
 
     private void Update()
     {
-        WaterLevelChange(heatExchanger.steamKnobValue.value);
+        WaterLevelChange(heatExchanger.waterFlowRate * 0.001f * Time.deltaTime);
     }
 
 

@@ -15,12 +15,13 @@ public class ConcentratedLiquidrController : MonoBehaviour
 
     private void Update()
     {
-        ConcLiquidLevelChange(heatExchanger.concLiquidFlowRate);
+        ConcLiquidLevelChange(heatExchanger.concLiquidFlowRate * 0.001f * Time.deltaTime);
     }
 
 
     public void ConcLiquidLevelChange(float waterLevel)
     {
+
         waterWobble.SetFloat("_FillAmount", waterLevel);
         //Debug.Log(waterFlowXRKnob.value);
     }
