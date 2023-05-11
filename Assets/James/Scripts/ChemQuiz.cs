@@ -22,12 +22,16 @@ public class ChemQuiz : MonoBehaviour
     public Button Button3;
     public Button Button4;
 
+    public GameObject ButtonEnd;
+
     private int currentQuestion = 0;
 
     public GameObject prefab1;
     public GameObject prefab2;
     public GameObject prefab3;
     public GameObject prefab4;
+
+    public AirTableTime timer;
 
     //public GameObject prefab5;
     //public GameObject prefab6;
@@ -136,6 +140,10 @@ public class ChemQuiz : MonoBehaviour
         if (currentQuestion > 14)
         {
             gameObject.SetActive(false);
+            timer.ToggleTimer();
+            timer.SavePlayerTime();
+            ButtonEnd.SetActive(true);
+
         }
         else
         {

@@ -81,7 +81,7 @@ public class AirTableTime : MonoBehaviour
         createRecord.TableName = tableName;
         createRecord.NewRecordJson =
                                     "{\"fields\": {" +
-                                    "\"Student Time\":\"" + timePlayed + "\"" +
+                                    "\"Time\":\"" + timePlayed + "\"" +
                                     "}}";
         createRecord.CreateAirtableRecord();
     }
