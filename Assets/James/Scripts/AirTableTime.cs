@@ -42,7 +42,7 @@ public class AirTableTime : MonoBehaviour
     public void SavePlayerTime()
     {
         timePlayed = timePlayedInputField.text;
-        StartCoroutine("LogRecordOnAirtable");
+        //StartCoroutine("LogRecordOnAirtable");
     }
 
     public void LoadPlayerTime()

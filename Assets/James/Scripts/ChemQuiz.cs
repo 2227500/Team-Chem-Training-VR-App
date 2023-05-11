@@ -29,14 +29,15 @@ public class ChemQuiz : MonoBehaviour
     public GameObject prefab3;
     public GameObject prefab4;
 
-    public GameObject prefab5;
-    public GameObject prefab6;
-    public GameObject prefab7;
-    public GameObject prefab8;
+    //public GameObject prefab5;
+    //public GameObject prefab6;
+    //public GameObject prefab7;
+    //public GameObject prefab8;
 
     private Image imageComponentButton2;
     private Image imageComponentButton4;
 
+    public float score;
     
     void Start()
     {
@@ -52,62 +53,77 @@ public class ChemQuiz : MonoBehaviour
         if (currentQuestion == 0 && answer == 1)
         {
             feedbackText.text = "";
+            score = 0;
         }
         else if (currentQuestion == 1 && answer == 3)
         {
             feedbackText.text = "Correct!";
+            score = score + 1;
         }
         else if (currentQuestion == 2 && answer == 1)
         {
             feedbackText.text = "Correct!";
+            score = score + 1;
         }
         else if (currentQuestion == 3 && answer == 3)
         {
             feedbackText.text = "Correct!";
+            score = score + 1;
         }
         else if (currentQuestion == 4 && answer == 1)
         {
             feedbackText.text = "Correct!";
+            score = score + 1;
         }
         else if (currentQuestion == 5 && answer == 2)
         {
             feedbackText.text = "Correct!";
+            score = score + 1;
         }
         else if (currentQuestion == 6 && answer == 3)
         {
             feedbackText.text = "Correct!";
+            score = score + 1;
         }
         else if (currentQuestion == 7 && answer == 3)
         {
             feedbackText.text = "Correct!";
+            score = score + 1;
         }
         else if (currentQuestion == 8 && answer == 3)
         {
             feedbackText.text = "Correct!";
+            score = score + 1;
         }
         else if (currentQuestion == 9 && answer == 3)
         {
             feedbackText.text = "Correct!";
+            score = score + 1;
         }
         else if (currentQuestion == 10 && answer == 3)
         {
             feedbackText.text = "Correct!";
+            score = score + 1;
         }
         else if (currentQuestion == 11 && answer == 1)
         {
             feedbackText.text = "Correct!";
+            score = score + 1;
         }
         else if (currentQuestion == 12 && answer == 3)
         {
             feedbackText.text = "Correct!";
+            score = score + 1;
         }
         else if (currentQuestion == 13 && answer == 3)
         {
             feedbackText.text = "Correct!";
+            score = score + 1;
         }
         else if (currentQuestion == 14 && answer == 1)
         {
             feedbackText.text = "Correct!";
+            score = score + 1;
         }
         else
         {
@@ -286,10 +302,10 @@ public class ChemQuiz : MonoBehaviour
             }
             else if (currentQuestion == 1)
             {
-                //Instantiate(prefab1, new Vector3(0, 2, 0), Quaternion.identity);
-                //Instantiate(prefab2, new Vector3(0, 1, 0), Quaternion.identity);
-                //Instantiate(prefab3, new Vector3(0, 3, 0), Quaternion.identity);
-                //Instantiate(prefab4, new Vector3(0, 4, 0), Quaternion.identity);
+                Instantiate(prefab1, new Vector3(0, 2, 0), Quaternion.identity);
+                Instantiate(prefab2, new Vector3(0, 1, 0), Quaternion.identity);
+                Instantiate(prefab3, new Vector3(0, 3, 0), Quaternion.identity);
+                Instantiate(prefab4, new Vector3(0, 4, 0), Quaternion.identity);
 
                 questionText.text = "Question " + currentQuestion + ": Which piece of safety equipment did we not use?";
                 Button1.GetComponentInChildren<TMP_Text>().text = "1";
