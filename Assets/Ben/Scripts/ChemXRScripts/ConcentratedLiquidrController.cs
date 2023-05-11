@@ -15,7 +15,7 @@ public class ConcentratedLiquidrController : MonoBehaviour
 
     private void Update()
     {
-        ConcLiquidLevelChange(heatExchanger.concLiquidFlowRate * 0.001f * Time.deltaTime);
+        ConcLiquidLevelChange(heatExchanger.concLiquidFlowRate * 0.1f * Time.deltaTime);
     }
 
 
