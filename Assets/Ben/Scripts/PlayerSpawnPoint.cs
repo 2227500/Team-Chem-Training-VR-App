@@ -19,7 +19,7 @@ public class PlayerSpawnPoint : MonoBehaviour
     void Start()
     {
         player.GetComponent<Transform>().position = gameObject.transform.position;
-         
+        player.GetComponent<Transform>().Rotate(new Vector3(rotateOffset.x, rotateOffset.y, rotateOffset.z), Space.World); 
     }
 
 

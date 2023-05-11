@@ -70,7 +70,17 @@ public class KnobValueForText : MonoBehaviour
         }
     }
 
-    
+    public void LeverValuePump1()
+    {
+        if (pumbSwitch1.value)
+        {
+            isDone = true;
+        }
+        else
+        {
+            isDone = false;
+        }
+    }
 
     public void SteamValueChange()
     {
