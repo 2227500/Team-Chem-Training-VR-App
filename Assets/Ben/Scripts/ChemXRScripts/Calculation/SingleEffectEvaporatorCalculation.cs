@@ -41,7 +41,7 @@ public class SingleEffectEvaporatorCalculation : MonoBehaviour
   
     void Start()
     {
-        UpdateValues();
+        //UpdateValues();
     }
 
 
