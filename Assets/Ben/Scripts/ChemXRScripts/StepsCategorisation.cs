@@ -40,9 +40,11 @@ public class StepsCategorisation : MonoBehaviour
 
     public GameObject stepSixButton;
     public GameObject stepNineButton;
+    public GameObject stepElevenButton;
 
     public XRLever pumbSwitch1;
     public XRLever pumbSwitch2;
+    public XRLever eLCBSwitch;
 
     public int totalStepsDone;
 
@@ -53,10 +55,13 @@ public class StepsCategorisation : MonoBehaviour
 
     public TabletUIupdate tabletUI;
 
+    public GameObject quizPanel;
     private void Start()
     {
         stepSixButton.SetActive(false);
         stepNineButton.SetActive(false);
+        startSetupDoneSuccessfully = false;
+        quizPanel.SetActive(false);
     }
 
     private void Update()
@@ -78,7 +83,26 @@ public class StepsCategorisation : MonoBehaviour
         StartStepFifteenIsDone();
         StartStepSixteenIsDone();
 
-        AllStepsDoneOrNot();
+        AllStartStepsDoneOrNot();
+
+        if (startSetupDoneSuccessfully)
+        {
+            ShutDownOneIsDone();
+            ShutDownTwoIsDone();
+            ShutDownThreeIsDone();
+            ShutDownFourIsDone();
+            ShutDownFiveIsDone();
+            ShutDownSixIsDone();
+            ShutDownSevenIsDone();
+            ShutDownEightIsDone();
+            ShutDownNineIsDone();
+            ShutDownTenIsDone();
+
+            quizPanel.SetActive(true);
+        }
+
+        
+
     }
 
     #region Start up of Machine
@@ -111,6 +135,7 @@ public class StepsCategorisation : MonoBehaviour
             {
                 tabletUI.fullyOpenImage[0].color = Color.red;
                 isStepOneDone = false;
+                totalStepsDone = 0;
             }
         }
     }
@@ -157,6 +182,7 @@ public class StepsCategorisation : MonoBehaviour
                 {
                     tabletUI.fullyOpenImage[1].color = Color.red;
                     isStepTwoDone = false;
+                    totalStepsDone = 1;
                 }
             }
         }
@@ -203,6 +229,7 @@ public class StepsCategorisation : MonoBehaviour
                 {
                     tabletUI.fullyOpenImage[2].color = Color.red;
                     isStepThreeDone = false;
+                    totalStepsDone = 2;
                 }
             }
         }
@@ -249,6 +276,7 @@ public class StepsCategorisation : MonoBehaviour
                 {
                     tabletUI.fullyOpenImage[3].color = Color.red;
                     isStepFourDOne = false;
+                    totalStepsDone = 3;
                 }
             }
         }
@@ -294,6 +322,7 @@ public class StepsCategorisation : MonoBehaviour
                 {
                     tabletUI.fullyOpenImage[4].color = Color.red;
                     isStepFiveDOne = false;
+                    totalStepsDone = 4;
                 }
             }
         }
@@ -339,6 +368,7 @@ public class StepsCategorisation : MonoBehaviour
                 {
                     tabletUI.fullyOpenImage[5].color = Color.red;
                     isStepSixDone = false;
+                    totalStepsDone = 5;
                 }
             }
         }
@@ -527,6 +557,7 @@ public class StepsCategorisation : MonoBehaviour
     {
         if (isStepTenDone)
         {
+            stepElevenButton.SetActive(true);
             // Outline is getting enabled
             for (int i = 0; i < startstepEleven.Length; i++)
             {
@@ -535,6 +566,7 @@ public class StepsCategorisation : MonoBehaviour
         }
         else
         {
+            stepElevenButton.SetActive(false);
             // Outline is getting disabled
             for (int i = 0; i < startstepEleven.Length; i++)
             {
@@ -573,6 +605,7 @@ public class StepsCategorisation : MonoBehaviour
     {
         if (isStepElevenDone)
         {
+            stepElevenButton.SetActive(false);
             // Outline is getting enabled
             for (int i = 0; i < startstepTwelve.Length; i++)
             {
@@ -727,12 +760,12 @@ public class StepsCategorisation : MonoBehaviour
             for (int substep = 0; substep < startstepFifteen.Length; substep++)
             {
              
-                if (!pumbSwitch2.value)
+                if (!pumbSwitch1.value)
                 {
                     tabletUI.fullyOpenImage[14].color = Color.white;
                     totalStepsDone = 15;
                     isStepFifteenDone = true;
-                    Debug.Log("pumpswitch2 " + pumbSwitch2.value);
+                    Debug.Log("pumpswitch2 " + pumbSwitch1.value);
                 }
                 else
                 {
@@ -787,7 +820,6 @@ public class StepsCategorisation : MonoBehaviour
         }
     }
 
-    #endregion
 
     public void StepSixDone()
     {
@@ -803,15 +835,30 @@ public class StepsCategorisation : MonoBehaviour
 
     }
 
-    public GameObject startUpCompleted;
+    public void StepElevenDone()
+    {
+        isStepElevenDone = true;
+        totalStepsDone = 11;
+    }
+    #endregion
 
+    //public void ELCB()
+    //{
+    //    isStepSevenDone = true;
+    //    totalStepsDone = 7;
+
+    //}
+
+    public GameObject startUpCompleted;
+    public bool startSetupDoneSuccessfully;
 
     #region StartUpCompletionCelebration
-    public void AllStepsDoneOrNot()
+    public void AllStartStepsDoneOrNot()
     {
-        if(totalStepsDone == 16)
+        if(isStepOneDone && isStepTwoDone && isStepThreeDone && isStepFourDOne && isStepFiveDOne && isStepSixDone && isStepSevenDone && isStepEightDone &&isStepNineDone && isStepTenDone && isStepElevenDone && isStepTwelveDone && isStepThirteenDone && isStepFourteenDone && isStepFifteenDone && isStepSixteenDone)
         {
             StartCoroutine(StartUpCelebration());
+            startSetupDoneSuccessfully = true;
             Debug.Log("All Steps Done !");
         }
     }
@@ -822,6 +869,252 @@ public class StepsCategorisation : MonoBehaviour
         yield return new WaitForSeconds(3f);
         startUpCompleted.SetActive(false);
     }
+
+    #endregion
+
+    #region ShutDown Machine
+
+    public bool shutDownStepOne, shutDownStepTwo, shutDownStepThree, shutDownStepFour, shutDownStepFive, shutDownStepSix, shutDownStepSeven, shutDownStepEight, shutDownStepNine, shutDownStepTen;
+
+    public void ShutDownOneIsDone()
+    {
+
+        for (int i = 0; i < shutstepOne.Length; i++)
+        {
+            int substepdone = 0;
+            if (!shutstepOne[i].isDone)
+            {
+                substepdone++;
+                Debug.Log("Substep one is done");
+
+            }
+
+            if (substepdone == shutstepOne.Length)
+            {
+                tabletUI.fullyOpenImage[0].color = Color.white;
+                totalStepsDone = 1;
+                shutDownStepOne = true;
+            }
+            else
+            {
+                tabletUI.fullyOpenImage[0].color = Color.red;
+                shutDownStepOne = false;
+                totalStepsDone = 0;
+            }
+        }
+    }
+    public void ShutDownTwoIsDone()
+    {
+
+        for (int i = 0; i < shutstepTwo.Length; i++)
+        {
+            int substepdone = 0;
+            if (!shutstepTwo[i].isDone)
+            {
+                substepdone++;
+                Debug.Log("Substep one is done");
+
+            }
+
+            if (substepdone == shutstepTwo.Length)
+            {
+                tabletUI.fullyOpenImage[1].color = Color.white;
+                totalStepsDone = 1;
+                shutDownStepTwo = true;
+            }
+            else
+            {
+                tabletUI.fullyOpenImage[1].color = Color.red;
+                shutDownStepTwo = false;
+                totalStepsDone = 0;
+            }
+        }
+    }
+    public void ShutDownThreeIsDone()
+    {
+
+        for (int i = 0; i < startstepTen.Length; i++)
+        {
+
+            for (int substep = 0; substep < shutstepThree.Length; substep++)
+            {
+
+                if (!pumbSwitch2.value)
+                {
+                    tabletUI.shutDownStatusImage[2].color = Color.white;
+                    totalStepsDone = 10;
+                    isStepTenDone = true;
+                }
+                else
+                {
+                    tabletUI.shutDownStatusImage[2].color = Color.red;
+                    isStepTenDone = false;
+                }
+            }
+        }
+    }
+    public void ShutDownFourIsDone()
+    {
+
+        for (int i = 0; i < startstepTen.Length; i++)
+        {
+
+            for (int substep = 0; substep < shutstepThree.Length; substep++)
+            {
+
+                if (!pumbSwitch2.value)
+                {
+                    tabletUI.shutDownStatusImage[2].color = Color.white;
+                    totalStepsDone = 10;
+                    isStepTenDone = true;
+                }
+                else
+                {
+                    tabletUI.shutDownStatusImage[2].color = Color.red;
+                    isStepTenDone = false;
+                }
+            }
+        }
+    }
+    public void ShutDownFiveIsDone()
+    {
+
+        for (int i = 0; i < startstepTen.Length; i++)
+        {
+
+            for (int substep = 0; substep < shutstepThree.Length; substep++)
+            {
+
+                if (!pumbSwitch2.value)
+                {
+                    tabletUI.shutDownStatusImage[2].color = Color.white;
+                    totalStepsDone = 10;
+                    isStepTenDone = true;
+                }
+                else
+                {
+                    tabletUI.shutDownStatusImage[2].color = Color.red;
+                    isStepTenDone = false;
+                }
+            }
+        }
+    }
+    public void ShutDownSixIsDone()
+    {
+
+        for (int i = 0; i < startstepTen.Length; i++)
+        {
+
+            for (int substep = 0; substep < shutstepThree.Length; substep++)
+            {
+
+                if (!pumbSwitch2.value)
+                {
+                    tabletUI.shutDownStatusImage[2].color = Color.white;
+                    totalStepsDone = 10;
+                    isStepTenDone = true;
+                }
+                else
+                {
+                    tabletUI.shutDownStatusImage[2].color = Color.red;
+                    isStepTenDone = false;
+                }
+            }
+        }
+    }
+    public void ShutDownSevenIsDone()
+    {
+
+        for (int i = 0; i < startstepTen.Length; i++)
+        {
+
+            for (int substep = 0; substep < shutstepThree.Length; substep++)
+            {
+
+                if (!eLCBSwitch.value)
+                {
+                    tabletUI.shutDownStatusImage[2].color = Color.white;
+                    totalStepsDone = 10;
+                    isStepTenDone = true;
+                }
+                else
+                {
+                    tabletUI.shutDownStatusImage[2].color = Color.red;
+                    isStepTenDone = false;
+                }
+            }
+        }
+    }
+    public void ShutDownEightIsDone()
+    {
+
+        for (int i = 0; i < startstepTen.Length; i++)
+        {
+
+            for (int substep = 0; substep < shutstepThree.Length; substep++)
+            {
+
+                if (!pumbSwitch2.value)
+                {
+                    tabletUI.shutDownStatusImage[2].color = Color.white;
+                    totalStepsDone = 10;
+                    isStepTenDone = true;
+                }
+                else
+                {
+                    tabletUI.shutDownStatusImage[2].color = Color.red;
+                    isStepTenDone = false;
+                }
+            }
+        }
+    }
+    public void ShutDownNineIsDone()
+    {
+
+        for (int i = 0; i < startstepTen.Length; i++)
+        {
+
+            for (int substep = 0; substep < shutstepThree.Length; substep++)
+            {
+
+                if (!pumbSwitch2.value)
+                {
+                    tabletUI.shutDownStatusImage[2].color = Color.white;
+                    totalStepsDone = 10;
+                    isStepTenDone = true;
+                }
+                else
+                {
+                    tabletUI.shutDownStatusImage[2].color = Color.red;
+                    isStepTenDone = false;
+                }
+            }
+        }
+    }
+    public void ShutDownTenIsDone()
+    {
+
+        for (int i = 0; i < startstepTen.Length; i++)
+        {
+
+            for (int substep = 0; substep < shutstepThree.Length; substep++)
+            {
+
+                if (!pumbSwitch2.value)
+                {
+                    tabletUI.shutDownStatusImage[2].color = Color.white;
+                    totalStepsDone = 10;
+                    isStepTenDone = true;
+                }
+                else
+                {
+                    tabletUI.shutDownStatusImage[2].color = Color.red;
+                    isStepTenDone = false;
+                }
+            }
+        }
+    }
+
 
     #endregion
 }
