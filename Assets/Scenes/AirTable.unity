@@ -1552,6 +1552,10 @@ MonoBehaviour:
   questionText: {fileID: 854691704}
   feedbackText: {fileID: 522905872}
   fadeTime: 1
+  textToChangeSize1: {fileID: 0}
+  textToChangeSize2: {fileID: 0}
+  textToChangeSize3: {fileID: 0}
+  quizStartButton: {fileID: 0}
   Button1: {fileID: 181188381}
   Button2: {fileID: 293944804}
   Button3: {fileID: 844189096}
@@ -1563,10 +1567,7 @@ MonoBehaviour:
     type: 3}
   prefab4: {fileID: -6689036041284674117, guid: 8a72599595197aa4a80243c42f89b5a5,
     type: 3}
-  prefab5: {fileID: 0}
-  prefab6: {fileID: 0}
-  prefab7: {fileID: 0}
-  prefab8: {fileID: 0}
+  score: 0
 --- !u!114 &560374915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4465,6 +4466,7 @@ MonoBehaviour:
   updateRecordExample: {fileID: 1645950129}
   student: {fileID: 1024575450}
   time: {fileID: 1024575451}
+  quiz: {fileID: 560374914}
   values: {fileID: 0}
 --- !u!1001 &1562860319
 PrefabInstance:

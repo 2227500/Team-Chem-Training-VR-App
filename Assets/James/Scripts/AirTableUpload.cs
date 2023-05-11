@@ -14,7 +14,7 @@ public class AirTableUpload : MonoBehaviour
 
     public AirTableStudent student;
     public AirTableTime time;
-    //public ChemQuiz quiz;
+    public ChemQuiz quiz;
     public HeatExchangerController values;
 
     public void LogRecordOnAirtable()
@@ -24,7 +24,7 @@ public class AirTableUpload : MonoBehaviour
                                     "{\"fields\": {" +
                                     "\"Student\":\"" + student.playerName + "\", " +
                                     "\"Time\":\"" + time.timePlayed + "\", " +
-                                    //"\"Quiz\":\"" + quiz.health + "\", " +
+                                    "\"Quiz\":\"" + quiz.score + "\", " +
                                     "\"ValuesIn\":\"" + values.waterTemperatureInE1 + "\"" +
                                     "\"ValuesOut\":\"" + values.waterTemperatureOutE1 + "\"" +
                                     "\"ValuesLFlow\":\"" + values.concLiquidFlowRate + "\"" +
