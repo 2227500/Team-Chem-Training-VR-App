@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Ben/Scene/OnBoardingBen.unity
     guid: 4b4f29a3ab0447347bffaccacdb4a0ed
   - enabled: 0
-    path: Assets/Chen/Environment.unity
+    path: Assets/Chen/Chen's Environment.unity
     guid: fe8564e6405d5584fb2f939b65a06395
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: fc52e5fd416550f4dafe21b2532c403f,
