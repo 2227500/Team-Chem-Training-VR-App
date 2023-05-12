@@ -38,13 +38,17 @@ public class TK1WaterLevel : MonoBehaviour
     public float totalTime = 180f; // The total time in seconds to decrease the value
 
     private float timeElapsed = 0f;
-
+    public bool isTK1Empty;
     void TestIncrement()
     {
         if (myValue > minDecrease && timeElapsed < totalTime)
         {
             myValue -= decreaseRate;
             timeElapsed += Time.deltaTime;
+        }
+        else
+        {
+            isTK1Empty = true;
         }
         Debug.Log(myValue);
     }

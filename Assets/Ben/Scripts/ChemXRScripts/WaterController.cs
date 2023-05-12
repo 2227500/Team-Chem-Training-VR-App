@@ -27,19 +27,24 @@ public class WaterController : MonoBehaviour
         //Debug.Log(waterFlowXRKnob.value);
     }
 
-    public float myValue = 0f;
-    public float increaseRate = 0.01f; // Adjust this value to increase slower or faster
-    public float maxIncrease = 1f;
-    public float totalTime = 10f; // The total time in seconds to increase the value
+    public float myValue;
+    public float increaseRate; // Adjust this value to increase slower or faster
+    public float maxIncrease;
+    public float totalTime; // The total time in seconds to increase the value
 
     private float timeElapsed = 0f;
 
+    public bool isWaterCollected;
     void WaterLevelIncrease()
     {
         if (myValue < maxIncrease && timeElapsed < totalTime)
         {
             myValue += increaseRate;
             timeElapsed += Time.deltaTime;
+        }
+        else
+        {
+            isWaterCollected = true;
         }
     }
 }

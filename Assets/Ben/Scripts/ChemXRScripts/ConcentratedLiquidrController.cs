@@ -34,7 +34,7 @@ public class ConcentratedLiquidrController : MonoBehaviour
     public float totalTime = 10f; // The total time in seconds to increase the value
 
     private float timeElapsed = 0f;
-
+    public bool isConcentratedLiquidCollected;
     void ConcLevelIncrease()
     {
         if (initValue < maxIncrease && timeElapsed < totalTime)
