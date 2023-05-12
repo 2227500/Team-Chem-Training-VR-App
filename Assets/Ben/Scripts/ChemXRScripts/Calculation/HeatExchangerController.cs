@@ -199,12 +199,17 @@ public class HeatExchangerController : MonoBehaviour
 
     IEnumerator DisplayTextUpdate()
     {
+        yield return new WaitForSeconds(10f);
         tI1Value.text = waterTemperatureInE1.ToString("F2");
         float t15 = waterTemperatureInE1 + Random.Range(-0.2f, 0.6f);
         tI5Value.text = t15.ToString("F2");
+        
         //steamTemperatureValue.text = steamTemperature.ToString();
-        yield return new WaitForSeconds(10f);
+        float t16 = waterTemperatureOutE2 + Random.Range(3f, 6f);
+        tI6Value.text = t16.ToString("F2");
     }
+    
+    
 }
 
 
