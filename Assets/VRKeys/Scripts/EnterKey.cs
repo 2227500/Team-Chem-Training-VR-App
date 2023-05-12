@@ -22,6 +22,7 @@ namespace VRKeys {
 		public BoxCollider wallColliderToDisable;
 		public GameObject uIToDisable;
 
+		public AirTableStudent savingStudent;
         public void Start()
         {
 			wallColliderToDisable.enabled = true;
@@ -32,10 +33,13 @@ namespace VRKeys {
 			keyboard.Submit ();
 			wallColliderToDisable.enabled = false;
 			uIToDisable.SetActive(false);
-		}
+			savingStudent.SavePlayerName();
+
+        }
 
 		public override void UpdateLayout (Layout translation) {
 			label.text = translation.enterButtonLabel;
 		}
+
 	}
 }

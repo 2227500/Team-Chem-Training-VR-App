@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class AirTableScore : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("Scripts")]
+    public CreateRecord createRecord;
+    public UpdateRecordExample updateRecordExample;
+    public ChemQuiz quiz;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

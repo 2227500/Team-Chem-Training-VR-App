@@ -6,17 +6,18 @@ using TMPro;
 
 public class HeatExchangerController : MonoBehaviour
 {
-    public float steamFlowRate = 0.0f; // initial steam flow rate
-    public float waterFlowRate = 0.0f; // initial water flow rate
-    public float steamTemperature = 0.0f; // initial steam temperature
-    public float waterTemperatureInE1 = 0.0f; // initial water temperature at the inlet of E1
-    public float waterTemperatureOutE1 = 0.0f; // initial water temperature at the outlet of E1
-    public float waterTemperatureOutE2 = 0.0f; // initial water temperature at the outlet of E2
+    public float steamFlowRate = 0.0f;
+    public float waterFlowRate = 0.0f;
+    public float steamTemperature = 0.0f; 
+    public float waterTemperatureInE1 = 0.0f; 
+    public float waterTemperatureOutE1 = 0.0f; 
+    public float waterTemperatureOutE2 = 0.0f; 
+    public float waterTemperatureOutE3 = 0.0f; 
 
-    public float heatTransferCoefficientE1; // heat transfer coefficient for E1
-    public float heatTransferCoefficientE2; // heat transfer coefficient for E2
-    public float densityWater = 1000.0f; // density of water in kg/m^3
-    public float specificHeatWater = 4180.0f; // specific heat of water in J/(kg*K)
+    public float heatTransferCoefficientE1;
+    public float heatTransferCoefficientE2; 
+    public float densityWater = 1000.0f; 
+    public float specificHeatWater = 4180.0f; 
 
     public bool isPumpOneOn;
     public bool isPumpTwoOn;
@@ -49,7 +50,7 @@ public class HeatExchangerController : MonoBehaviour
     {
         CalculateWaterTemperatureOutE1();
         CalculateWaterTemperatureOutE2();
-
+        CalculateWaterTemperatureOutE3();
         
 
         ControlSteamFlowRate();
@@ -60,10 +61,6 @@ public class HeatExchangerController : MonoBehaviour
 
     public void CalculateWaterTemperatureOutE1()
     {
-
-        // Calculate the temperature of the water at the outlet of E1 based on the steam temperature,
-        // water flow rate, heat transfer coefficient of E1, and physical properties of water such as density
-        // and specific heat.
         
         float deltaT = steamTemperature - waterTemperatureInE1; // temperature difference between steam and water
         float q = waterFlowRate * densityWater * specificHeatWater * deltaT; // heat transferred from steam to water
@@ -72,18 +69,16 @@ public class HeatExchangerController : MonoBehaviour
         waterTemperatureOutE1 = waterTemperatureInE1 + q / (uA * deltaTLogMean); // calculate water temperature at the outlet of E1
         tI2Value.text = waterTemperatureOutE1.ToString("f2");
 
-        Debug.Log("DeltaT1 : " + deltaT);
-        Debug.Log("Heat transferred (q)1: " + q);
-        Debug.Log(heatTransferCoefficientE1);
-        Debug.Log("uA1 : " + uA);
-        Debug.Log("Log mean temperature1: " + deltaTLogMean);
-        Debug.Log("WaterTemperatureOutE1: " + waterTemperatureOutE1);
+        //Debug.Log("DeltaT1 : " + deltaT);
+        //Debug.Log("Heat transferred (q)1: " + q);
+        //Debug.Log(heatTransferCoefficientE1);
+        //Debug.Log("uA1 : " + uA);
+        //Debug.Log("Log mean temperature1: " + deltaTLogMean);
+        //Debug.Log("WaterTemperatureOutE1: " + waterTemperatureOutE1);
     }
 
     public void CalculateWaterTemperatureOutE2()
     {
-        // Calculate the temperature of the water at the outlet of E2 based on the water
-        // flow rate, heat transfer coefficient of E2, and physical properties of water.
         float deltaT = waterTemperatureOutE1;// - waterTemperatureOutE2; // temperature difference between water at E1 and E2
         float q = waterFlowRate * densityWater * specificHeatWater * deltaT; // heat transferred from E1 to E2
         float uA = heatTransferCoefficientE2 * 33.3f; //CalculateSurfaceAreaE2(); // overall heat transfer coefficient times surface area of E2
@@ -91,34 +86,32 @@ public class HeatExchangerController : MonoBehaviour
         waterTemperatureOutE2 = waterTemperatureOutE1 + q / (uA * deltaTLogMean); // calculate water temperature at the outlet of E2
         tI3Value.text = waterTemperatureOutE2.ToString("f2");
 
-        Debug.Log("DeltaT2 : " + deltaT);
-        Debug.Log("Heat transferred (q)2: " + q);
-        Debug.Log(heatTransferCoefficientE2);
-        Debug.Log("uA2 : " + uA);
-        Debug.Log("Log mean temperature2: " + deltaTLogMean);
-        Debug.Log("WaterTemperatureOutE2: " + waterTemperatureOutE2);
-        Debug.Log("WaterTemperatureOutE1: " + waterTemperatureOutE1);
+        //Debug.Log("DeltaT2 : " + deltaT);
+        //Debug.Log("Heat transferred (q)2: " + q);
+        //Debug.Log(heatTransferCoefficientE2);
+        //Debug.Log("uA2 : " + uA);
+        //Debug.Log("Log mean temperature2: " + deltaTLogMean);
+        //Debug.Log("WaterTemperatureOutE2: " + waterTemperatureOutE2);
+        //Debug.Log("WaterTemperatureOutE1: " + waterTemperatureOutE1);
 
     }
 
     public void CalculateWaterTemperatureOutE3()
     {
-        // Calculate the temperature of the water at the outlet of E2 based on the water
-        // flow rate, heat transfer coefficient of E2, and physical properties of water.
         float deltaT = waterTemperatureOutE1;// - waterTemperatureOutE2; // temperature difference between water at E1 and E2
         float q = waterFlowRate * densityWater * specificHeatWater * deltaT; // heat transferred from E1 to E2
         float uA = heatTransferCoefficientE2 * 33.3f; //CalculateSurfaceAreaE2(); // overall heat transfer coefficient times surface area of E2
         float deltaTLogMean = 53.6f; //CalculateLogMeanTemperatureDifferenceE2(deltaT); // log mean temperature difference for E2
-        waterTemperatureOutE2 = waterTemperatureOutE1 + q / (uA * deltaTLogMean); // calculate water temperature at the outlet of E2
-        tI3Value.text = waterTemperatureOutE2.ToString("f2");
+        waterTemperatureOutE3 = waterTemperatureOutE1 + q / (uA * deltaTLogMean); // calculate water temperature at the outlet of E2
+        tI4Value.text = waterTemperatureOutE2.ToString("f2");
 
-        Debug.Log("DeltaT2 : " + deltaT);
-        Debug.Log("Heat transferred (q)2: " + q);
+        Debug.Log("DeltaT3 : " + deltaT);
+        Debug.Log("Heat transferred (q)3: " + q);
         Debug.Log(heatTransferCoefficientE2);
         Debug.Log("uA2 : " + uA);
-        Debug.Log("Log mean temperature2: " + deltaTLogMean);
-        Debug.Log("WaterTemperatureOutE2: " + waterTemperatureOutE2);
-        Debug.Log("WaterTemperatureOutE1: " + waterTemperatureOutE1);
+        Debug.Log("Log mean temperature3: " + deltaTLogMean);
+        Debug.Log("WaterTemperatureOutE3: " + waterTemperatureOutE2);
+        Debug.Log("WaterTemperatureOutE3: " + waterTemperatureOutE1);
 
     }
 

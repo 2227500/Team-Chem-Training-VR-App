@@ -42,7 +42,7 @@ public class AirTableTime : MonoBehaviour
     public void SavePlayerTime()
     {
         timePlayed = timePlayedInputField.text;
-        StartCoroutine("LogRecordOnAirtable");
+        //StartCoroutine("LogRecordOnAirtable");
     }
 
     public void LoadPlayerTime()
@@ -81,7 +81,7 @@ public class AirTableTime : MonoBehaviour
         createRecord.TableName = tableName;
         createRecord.NewRecordJson =
                                     "{\"fields\": {" +
-                                    "\"Student Time\":\"" + timePlayed + "\"" +
+                                    "\"Time\":\"" + timePlayed + "\"" +
                                     "}}";
         createRecord.CreateAirtableRecord();
     }

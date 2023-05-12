@@ -13,26 +13,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.Content.Interaction;
-
+using VRKeys;
 public class KnobValueForText : MonoBehaviour
 {
     public XRKnob knob;
     public Text knobValueText;
     public SingleEffectEvaporatorCalculation calculatedValues;
     public XRLever pumbSwitch1;
-    public XRLever pumbSwitch2;
+    //public XRLever pumbSwitch2;
     public bool shouldOpenFully; // bool has to be true if the valve is supposed to open fully
     public bool shouldOpenPartially; // bool has to be true if the valve is supposed to open partially
     public Outline leverOutlineColor;
 
     public bool isDone;
 
-    
+    public XRGripButton gripButton;
     private void Start()
     {
         
         isDone = false;
-
+        
         
     }
 
@@ -42,12 +42,10 @@ public class KnobValueForText : MonoBehaviour
         {
             Debug.Log("Pump switch one");
         }
-        if(pumbSwitch2 == null)
+        if(gripButton == null)
         {
             Debug.Log("Pump swaict one not assigned");
         }
-        
-
         
     }
     /// <summary>
@@ -70,7 +68,29 @@ public class KnobValueForText : MonoBehaviour
         }
     }
 
-    
+    public void LeverValuePump1()
+    {
+        if (pumbSwitch1.value)
+        {
+            isDone = true;
+        }
+        else
+        {
+            isDone = false;
+        }
+    }
+
+    public void StartGripButton()
+    {
+        if (gripButton.isSelected)
+        {
+            isDone = true;
+        }
+        else
+        {
+            isDone = false;
+        }
+    }
 
     public void SteamValueChange()
     {
