@@ -882,7 +882,7 @@ public class StepsCategorisation : MonoBehaviour
         for (int i = 0; i < shutstepOne.Length; i++)
         {
             int substepdone = 0;
-            if (!shutstepOne[i].isDone)
+            if (!shutstepOne[i].isDone && startSetupDoneSuccessfully)
             {
                 substepdone++;
                 Debug.Log("Substep one is done");
@@ -891,15 +891,15 @@ public class StepsCategorisation : MonoBehaviour
 
             if (substepdone == shutstepOne.Length)
             {
-                tabletUI.fullyOpenImage[0].color = Color.white;
-                totalStepsDone = 1;
+                tabletUI.shutDownStatusImage[0].color = Color.white;
+                
                 shutDownStepOne = true;
             }
             else
             {
-                tabletUI.fullyOpenImage[0].color = Color.red;
+                tabletUI.shutDownStatusImage[0].color = Color.red;
                 shutDownStepOne = false;
-                totalStepsDone = 0;
+               
             }
         }
     }
@@ -909,7 +909,7 @@ public class StepsCategorisation : MonoBehaviour
         for (int i = 0; i < shutstepTwo.Length; i++)
         {
             int substepdone = 0;
-            if (!shutstepTwo[i].isDone)
+            if (!shutstepTwo[i].isDone && startSetupDoneSuccessfully)
             {
                 substepdone++;
                 Debug.Log("Substep one is done");
@@ -918,37 +918,37 @@ public class StepsCategorisation : MonoBehaviour
 
             if (substepdone == shutstepTwo.Length)
             {
-                tabletUI.fullyOpenImage[1].color = Color.white;
-                totalStepsDone = 1;
+                tabletUI.shutDownStatusImage[1].color = Color.white;
+                
                 shutDownStepTwo = true;
             }
             else
             {
-                tabletUI.fullyOpenImage[1].color = Color.red;
+                tabletUI.shutDownStatusImage[1].color = Color.red;
                 shutDownStepTwo = false;
-                totalStepsDone = 0;
+                
             }
         }
     }
     public void ShutDownThreeIsDone()
     {
 
-        for (int i = 0; i < startstepTen.Length; i++)
+        for (int i = 0; i < shutstepThree.Length; i++)
         {
 
             for (int substep = 0; substep < shutstepThree.Length; substep++)
             {
 
-                if (!pumbSwitch2.value)
+                if (!pumbSwitch1.value && startSetupDoneSuccessfully)
                 {
                     tabletUI.shutDownStatusImage[2].color = Color.white;
-                    totalStepsDone = 10;
-                    isStepTenDone = true;
+                    
+                    shutDownStepThree = true;
                 }
                 else
                 {
                     tabletUI.shutDownStatusImage[2].color = Color.red;
-                    isStepTenDone = false;
+                    shutDownStepThree = false;
                 }
             }
         }
@@ -956,22 +956,22 @@ public class StepsCategorisation : MonoBehaviour
     public void ShutDownFourIsDone()
     {
 
-        for (int i = 0; i < startstepTen.Length; i++)
+        for (int i = 0; i < shutstepFour.Length; i++)
         {
 
-            for (int substep = 0; substep < shutstepThree.Length; substep++)
+            for (int substep = 0; substep < shutstepFour.Length; substep++)
             {
 
-                if (!pumbSwitch2.value)
+                if (!pumbSwitch2.value && startSetupDoneSuccessfully)
                 {
-                    tabletUI.shutDownStatusImage[2].color = Color.white;
-                    totalStepsDone = 10;
-                    isStepTenDone = true;
+                    tabletUI.shutDownStatusImage[3].color = Color.white;
+                    
+                    shutDownStepFour = true;
                 }
                 else
                 {
-                    tabletUI.shutDownStatusImage[2].color = Color.red;
-                    isStepTenDone = false;
+                    tabletUI.shutDownStatusImage[3].color = Color.red;
+                    shutDownStepFour = false;
                 }
             }
         }
@@ -979,22 +979,22 @@ public class StepsCategorisation : MonoBehaviour
     public void ShutDownFiveIsDone()
     {
 
-        for (int i = 0; i < startstepTen.Length; i++)
+        for (int i = 0; i < shutstepFive.Length; i++)
         {
 
-            for (int substep = 0; substep < shutstepThree.Length; substep++)
+            for (int substep = 0; substep < shutstepFive.Length; substep++)
             {
 
-                if (!pumbSwitch2.value)
+                if (!shutstepTwo[i].isDone && startSetupDoneSuccessfully)
                 {
-                    tabletUI.shutDownStatusImage[2].color = Color.white;
-                    totalStepsDone = 10;
-                    isStepTenDone = true;
+                    tabletUI.shutDownStatusImage[4].color = Color.white;
+                    
+                    shutDownStepFive = true;
                 }
                 else
                 {
-                    tabletUI.shutDownStatusImage[2].color = Color.red;
-                    isStepTenDone = false;
+                    tabletUI.shutDownStatusImage[4].color = Color.red;
+                    shutDownStepFive = false;
                 }
             }
         }
@@ -1002,22 +1002,22 @@ public class StepsCategorisation : MonoBehaviour
     public void ShutDownSixIsDone()
     {
 
-        for (int i = 0; i < startstepTen.Length; i++)
+        for (int i = 0; i < shutstepSix.Length; i++)
         {
 
-            for (int substep = 0; substep < shutstepThree.Length; substep++)
+            for (int substep = 0; substep < shutstepSix.Length; substep++)
             {
 
-                if (!pumbSwitch2.value)
+                if (!shutstepSix[i].isDone && startSetupDoneSuccessfully)
                 {
-                    tabletUI.shutDownStatusImage[2].color = Color.white;
-                    totalStepsDone = 10;
-                    isStepTenDone = true;
+                    tabletUI.shutDownStatusImage[5].color = Color.white;
+                    
+                    shutDownStepSix = true;
                 }
                 else
                 {
-                    tabletUI.shutDownStatusImage[2].color = Color.red;
-                    isStepTenDone = false;
+                    tabletUI.shutDownStatusImage[5].color = Color.red;
+                    shutDownStepSix = false;
                 }
             }
         }
@@ -1025,22 +1025,22 @@ public class StepsCategorisation : MonoBehaviour
     public void ShutDownSevenIsDone()
     {
 
-        for (int i = 0; i < startstepTen.Length; i++)
+        for (int i = 0; i < shutstepSeven.Length; i++)
         {
 
-            for (int substep = 0; substep < shutstepThree.Length; substep++)
+            for (int substep = 0; substep < shutstepSeven.Length; substep++)
             {
 
-                if (!eLCBSwitch.value)
+                if (!shutstepSeven[i].isDone && startSetupDoneSuccessfully)
                 {
-                    tabletUI.shutDownStatusImage[2].color = Color.white;
-                    totalStepsDone = 10;
-                    isStepTenDone = true;
+                    tabletUI.shutDownStatusImage[6].color = Color.white;
+                    
+                    shutDownStepSeven = true;
                 }
                 else
                 {
-                    tabletUI.shutDownStatusImage[2].color = Color.red;
-                    isStepTenDone = false;
+                    tabletUI.shutDownStatusImage[6].color = Color.red;
+                    shutDownStepSeven = false;
                 }
             }
         }
@@ -1048,22 +1048,22 @@ public class StepsCategorisation : MonoBehaviour
     public void ShutDownEightIsDone()
     {
 
-        for (int i = 0; i < startstepTen.Length; i++)
+        for (int i = 0; i < shutstepEight.Length; i++)
         {
 
-            for (int substep = 0; substep < shutstepThree.Length; substep++)
+            for (int substep = 0; substep < shutstepEight.Length; substep++)
             {
 
-                if (!pumbSwitch2.value)
+                if (!shutstepEight[i].isDone && startSetupDoneSuccessfully)
                 {
-                    tabletUI.shutDownStatusImage[2].color = Color.white;
-                    totalStepsDone = 10;
-                    isStepTenDone = true;
+                    tabletUI.shutDownStatusImage[7].color = Color.white;
+                    
+                    shutDownStepEight = true;
                 }
                 else
                 {
-                    tabletUI.shutDownStatusImage[2].color = Color.red;
-                    isStepTenDone = false;
+                    tabletUI.shutDownStatusImage[7].color = Color.red;
+                    shutDownStepEight = false;
                 }
             }
         }
@@ -1071,22 +1071,22 @@ public class StepsCategorisation : MonoBehaviour
     public void ShutDownNineIsDone()
     {
 
-        for (int i = 0; i < startstepTen.Length; i++)
+        for (int i = 0; i < shutstepNine.Length; i++)
         {
 
-            for (int substep = 0; substep < shutstepThree.Length; substep++)
+            for (int substep = 0; substep < shutstepNine.Length; substep++)
             {
 
-                if (!pumbSwitch2.value)
+                if (!shutstepNine[i].isDone && startSetupDoneSuccessfully)
                 {
-                    tabletUI.shutDownStatusImage[2].color = Color.white;
-                    totalStepsDone = 10;
-                    isStepTenDone = true;
+                    tabletUI.shutDownStatusImage[8].color = Color.white;
+                    
+                    shutDownStepNine = true;
                 }
                 else
                 {
-                    tabletUI.shutDownStatusImage[2].color = Color.red;
-                    isStepTenDone = false;
+                    tabletUI.shutDownStatusImage[8].color = Color.red;
+                    shutDownStepNine = false;
                 }
             }
         }
@@ -1094,22 +1094,22 @@ public class StepsCategorisation : MonoBehaviour
     public void ShutDownTenIsDone()
     {
 
-        for (int i = 0; i < startstepTen.Length; i++)
+        for (int i = 0; i < shutstepTen.Length; i++)
         {
 
-            for (int substep = 0; substep < shutstepThree.Length; substep++)
+            for (int substep = 0; substep < shutstepTen.Length; substep++)
             {
 
-                if (!pumbSwitch2.value)
+                if (!shutstepTen[i].isDone && startSetupDoneSuccessfully)
                 {
-                    tabletUI.shutDownStatusImage[2].color = Color.white;
-                    totalStepsDone = 10;
-                    isStepTenDone = true;
+                    tabletUI.shutDownStatusImage[9].color = Color.white;
+                    
+                    shutDownStepTen = true;
                 }
                 else
                 {
-                    tabletUI.shutDownStatusImage[2].color = Color.red;
-                    isStepTenDone = false;
+                    tabletUI.shutDownStatusImage[9].color = Color.red;
+                    shutDownStepTen = false;
                 }
             }
         }
