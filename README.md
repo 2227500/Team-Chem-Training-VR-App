@@ -21,6 +21,10 @@ In this VR application we have tried to recreate the experiment in the Virtual R
 ##### **Laboratory Room**
 ![alt text](https://github.com/2239356Benadict/Assignment1/blob/main/lab.png)
  
+### Video
+  
+  [<img src="https://github.com/2239356Benadict/Assignment1/blob/main/MicrosoftTeams-image%20(11).png" width="1000" height="" />](https://www.youtube.com/watch?v=jChVhQzAMCA)
+  
 # Unity Settings
 
 Project made with Unity 2021.3.17f
