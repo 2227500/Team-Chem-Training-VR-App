@@ -1,8 +1,17 @@
+// /*--------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------
+// Creation Date: 12/05/23
+// Author: 2239356@swansea.ac.uk
+// Description: ChemXR
+// ----------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// Script controls audio.
+/// </summary>
 public class AudioManager3DInteraction : MonoBehaviour
 {
     public AudioClip[] instructionAudios;

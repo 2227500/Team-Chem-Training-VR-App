@@ -14,29 +14,29 @@ using UnityEngine.XR.Content.Interaction;
 
 public class SingleEffectEvaporatorCalculation : MonoBehaviour
 {
-    public float feedFlowRate; // Feed flow rate in kg/hr
-    public float feedConcentration; // Feed concentration in kg/kg
-    public float steamFlowRate; // Steam flow rate in kg/hr
-    public float evaporationRate; // Evaporation rate in kg/hr
+    public float feedFlowRate; 
+    public float feedConcentration; 
+    public float steamFlowRate; 
+    public float evaporationRate; 
     public Text feedFlowRateText;
     public Text feedConcentrationText;
     public Text steamFlowRateText;
     public Text evaporationRateText;
     public Text heatTransferRateText;
 
-    private float _initialFeedMass; // Initial mass of feed
-    private float _initialFeedVolume; // Initial volume of feed
-    private float _initialFeedDensity; // Initial density of feed
-    private float _initialFeedSpecificHeat; // Initial specific heat of feed
-    private float _initialFeedEnthalpy; // Initial enthalpy of feed
-    private float _initialSteamEnthalpy; // Initial enthalpy of steam
-    private float _finalFeedVolume; // Final volume of feed
-    private float _finalFeedDensity; // Final density of feed
-    private float _finalFeedSpecificHeat; // Final specific heat of feed
-    private float _finalFeedEnthalpy; // Final enthalpy of feed
-    private float _finalEvaporatedMass; // Final mass of evaporated water
-    private float _finalEvaporatedEnthalpy; // Final enthalpy of evaporated water
-    private float _heatTransferRate; // Heat transfer rate in kW
+    private float _initialFeedMass; 
+    private float _initialFeedVolume; 
+    private float _initialFeedDensity; 
+    private float _initialFeedSpecificHeat; 
+    private float _initialFeedEnthalpy; 
+    private float _initialSteamEnthalpy; 
+    private float _finalFeedVolume; 
+    private float _finalFeedDensity; 
+    private float _finalFeedSpecificHeat; 
+    private float _finalFeedEnthalpy; 
+    private float _finalEvaporatedMass; 
+    private float _finalEvaporatedEnthalpy; 
+    private float _heatTransferRate; 
 
   
     void Start()
@@ -106,15 +106,7 @@ public class SingleEffectEvaporatorCalculation : MonoBehaviour
         // Calculate heat transfer rate
         _heatTransferRate = _finalFeedEnthalpy - _initialFeedEnthalpy - _finalEvaporatedEnthalpy;
 
-        //Debug.Log("Heat transfer rate: " + _heatTransferRate + " kW");
-        //Debug.Log("Final Evaporated Enthalpy: " + _finalEvaporatedEnthalpy);
-        //Debug.Log("Final Evaporated Mass: " + _finalEvaporatedMass);
-        //Debug.Log("Final Feed Density: " + _finalFeedDensity);
-        //Debug.Log("Final Feed Enthalpy: " + _finalFeedEnthalpy);
-        //Debug.Log("Final Feed Mass: " + _finalFeedMass);
-        //Debug.Log("Final Feed Specific Heat: " + _finalFeedSpecificHeat);
-        //Debug.Log("Final Feed Volume: " + _finalFeedVolume);
-
+        
         // Update UI
         feedFlowRateText.text = feedFlowRate.ToString("0.00") + " kg/hr";
         feedConcentrationText.text = (feedConcentration * 100.0f).ToString("0.00") + " %";

@@ -1,7 +1,18 @@
+// /*--------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------
+// Creation Date: #DateTime#
+// Author: 2239356@swansea.ac.uk
+// Description: ChemXR
+// ----------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Script is used to check whether all steps are done.
+/// </summary>
 public class ProcessDoneUI : MonoBehaviour
 {
     public GameObject processDoneUI;

@@ -1,7 +1,7 @@
 
 // /*--------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------
-// Creation Date: #DateTime#
+// Creation Date: 12/05/23
 // Author: 2239356@swansea.ac.uk
 // Description: ChemXR
 // ----------------------------------------------------------------------------------
@@ -91,16 +91,7 @@ public class StepsCategorisation : MonoBehaviour
 
         if (startSetupDoneSuccessfully)
         {
-            //ShutDownOneIsDone();
-            //ShutDownTwoIsDone();
-            //ShutDownThreeIsDone();
-            //ShutDownFourIsDone();
-            //ShutDownFiveIsDone();
-            //ShutDownSixIsDone();
-            //ShutDownSevenIsDone();
-            //ShutDownEightIsDone();
-            //ShutDownNineIsDone();
-            //ShutDownTenIsDone();
+            
             shutDownButton.SetActive(true);
             quizPanel.SetActive(true);
         }
@@ -110,6 +101,9 @@ public class StepsCategorisation : MonoBehaviour
     }
 
     #region Start up of Machine
+    /// <summary>
+    /// Methods used to check the steps are done or not.
+    /// </summary>
     public void StartStepOneIsDone()
     {
         
@@ -949,7 +943,7 @@ public class StepsCategorisation : MonoBehaviour
 
         startSetupDoneSuccessfully = true;
     }
-    #endregion
+    #endregion //
 
     //public void ELCB()
     //{

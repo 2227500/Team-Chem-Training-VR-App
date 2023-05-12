@@ -1,7 +1,7 @@
 
 // /*--------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------
-// Creation Date: #DateTime#
+// Creation Date: 12/05/23
 // Author: 2239356@swansea.ac.uk
 // Description: ChemXR
 // ----------------------------------------------------------------------------------
@@ -35,7 +35,9 @@ public class KnobValueForText : MonoBehaviour
         
         
     }
-
+    /// <summary>
+    /// In some places the required attaching objects may not required. To avoid null reference this method can help.
+    /// </summary>
     public void NullBugFix()
     {
         if(pumbSwitch1 == null)
@@ -56,6 +58,7 @@ public class KnobValueForText : MonoBehaviour
         //converting the value to the required decimals
         var value = 100f * knob.value;
         knobValueText.text = value.ToString("f2");
+        // Check the knowb value and w.r.t that change the outline color.
         if ((knob.value == 1 && shouldOpenFully) || (knob.value >= 0.45f && shouldOpenPartially))
         {
             leverOutlineColor.OutlineColor = Color.green; //once knob fully open or partially open the outline color changes to green.
@@ -67,7 +70,9 @@ public class KnobValueForText : MonoBehaviour
             isDone = false;
         }
     }
-
+    /// <summary>
+    /// Method to check the status of lever. For lever use this method on unity events.
+    /// </summary>
     public void LeverValuePump1()
     {
         if (pumbSwitch1.value)
@@ -79,7 +84,9 @@ public class KnobValueForText : MonoBehaviour
             isDone = false;
         }
     }
-
+    /// <summary>
+    /// Method to check the status of grip button. For grip button use this method on unity events.
+    /// </summary>
     public void StartGripButton()
     {
         if (gripButton.isSelected)
