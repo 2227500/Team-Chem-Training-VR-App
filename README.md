@@ -13,18 +13,26 @@ In this VR application we have tried to recreate the experiment in the Virtual R
 ### **Features**
 
 ##### **OnBoardig**
-![alt text](https://github.com/2239356Benadict/Assignment1/blob/main/ChemVR_OnBoarding.png)
- <p align="justify">
+<p align="justify">
 An onboarding process allows users, both experienced and new, to become acquainted with a VR application before engaging in real activities.
+  
+![alt text](https://github.com/2239356Benadict/Assignment1/blob/main/ChemVR_OnBoarding.png)
+
 
 ##### **Safety Room**
-![alt text](https://github.com/2239356Benadict/Assignment1/blob/main/safetyroom.png)
+<p align="justify">
 Before entering the laboratory, the user puts on the necessary safety equipment. This enables the user to form a habit of doing the same in the real world.
+  
+![alt text](https://github.com/2239356Benadict/Assignment1/blob/main/safetyroom.png)
+
 
 
 ##### **Laboratory Room**
-![alt text](https://github.com/2239356Benadict/Assignment1/blob/main/lab.png)
+<p align="justify">
 In the laboratory scene, the user conducts the experiment and observes the outcomes.
+  
+![alt text](https://github.com/2239356Benadict/Assignment1/blob/main/lab.png)
+
  
 ### Video
   
