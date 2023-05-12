@@ -35,7 +35,7 @@ In the laboratory scene, the user conducts the experiment and observes the outco
 
  
 ### Video
-  
+  Click the image to play video
   [<img src="https://github.com/2239356Benadict/Assignment1/blob/main/MicrosoftTeams-image%20(11).png" width="1000" height="" />](https://www.youtube.com/watch?v=jChVhQzAMCA)
   
 ### Credits
