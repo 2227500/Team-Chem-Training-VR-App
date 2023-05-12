@@ -37,11 +37,19 @@ In the laboratory scene, the user conducts the experiment and observes the outco
 ### Video
   Click the image to play video
   [<img src="https://github.com/2239356Benadict/Assignment1/blob/main/MicrosoftTeams-image%20(11).png" width="1000" height="" />](https://www.youtube.com/watch?v=jChVhQzAMCA)
-  
+### Website
+ https://2239356.wixsite.com/chemvr
 ### Credits
+  #### Assets
   1. VR Keys: The Campfire Union
   2. Quick Outline: Chris Nolet
   3. Modern Laboratory: AndragorInc
+### Created By:
+  Benadict Joseph <br>
+  James Mead <br>
+  Chen Z <br>
+  Karthik <br>
+  Emmanuel
   
 # Unity Settings
 
