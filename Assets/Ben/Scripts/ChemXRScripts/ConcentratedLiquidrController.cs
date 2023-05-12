@@ -1,3 +1,11 @@
+// /*--------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------
+// Creation Date: 12/05/23
+// Author: 2239356@swansea.ac.uk
+// Description: ChemXR
+// ----------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +20,14 @@ public class ConcentratedLiquidrController : MonoBehaviour
     public float waterLevel;
 
     public HeatExchangerController heatExchanger;
+    public float initValue = 0f;
+    public float increaseRate = 0.01f; // Adjust this value to increase slower or faster
+    public float maxIncrease = 1f;
+    public float totalTime = 10f; // The total time in seconds to increase the value
+
+    private float timeElapsed = 0f;
+    public bool isConcentratedLiquidCollected;
+
 
     private void Update()
     {
@@ -27,14 +43,6 @@ public class ConcentratedLiquidrController : MonoBehaviour
         waterWobble.SetFloat("_FillAmount", waterLevel);
         //Debug.Log(waterFlowXRKnob.value);
     }
-
-    public float initValue = 0f;
-    public float increaseRate = 0.01f; // Adjust this value to increase slower or faster
-    public float maxIncrease = 1f;
-    public float totalTime = 10f; // The total time in seconds to increase the value
-
-    private float timeElapsed = 0f;
-
     void ConcLevelIncrease()
     {
         if (initValue < maxIncrease && timeElapsed < totalTime)

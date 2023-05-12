@@ -1,30 +1,35 @@
 // /*--------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------
-// Creation Date: 12/05/23
+// Creation Date: #DateTime#
 // Author: 2239356@swansea.ac.uk
 // Description: ChemXR
 // ----------------------------------------------------------------------------------
 // --------------------------------------------------------------------------------*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayAudioOnTriggerEnter : MonoBehaviour
+/// <summary>
+/// Script is used to check whether all steps are done.
+/// </summary>
+public class ProcessDoneUI : MonoBehaviour
 {
-    public AudioSource source;
+    public GameObject processDoneUI;
 
-    public void OnTriggerEnter(Collider other)
+    public WaterController waterController;
+    public ConcentratedLiquidrController concentrated;
+    public TK1WaterLevel tKWaterLevel;
+
+    private void Start()
     {
-        if(other.tag == "Player")
-        {
-            source.Play();
-        }
+        processDoneUI.SetActive(false);
     }
-    public void OnTriggerExit(Collider other)
+    public void Update()
     {
-        if (other.tag == "Player")
+        if (waterController && concentrated && tKWaterLevel)
         {
-            source.Stop();
+            processDoneUI.SetActive(true);
         }
     }
 }

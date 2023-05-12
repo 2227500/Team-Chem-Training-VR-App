@@ -26,10 +26,10 @@ public class ChemQuiz : MonoBehaviour
 
     private int currentQuestion = 0;
 
-    public GameObject prefab1;
-    public GameObject prefab2;
-    public GameObject prefab3;
-    public GameObject prefab4;
+    //public GameObject prefab1;
+    //public GameObject prefab2;
+    //public GameObject prefab3;
+    //public GameObject prefab4;
 
     public AirTableTime timer;
 
@@ -69,17 +69,17 @@ public class ChemQuiz : MonoBehaviour
             feedbackText.text = "Correct!";
             score = score + 1;
         }
-        else if (currentQuestion == 3 && answer == 3)
+        else if (currentQuestion == 3 && answer == 2)
         {
             feedbackText.text = "Correct!";
             score = score + 1;
         }
-        else if (currentQuestion == 4 && answer == 1)
+        else if (currentQuestion == 4 && answer == 3)
         {
             feedbackText.text = "Correct!";
             score = score + 1;
         }
-        else if (currentQuestion == 5 && answer == 2)
+        else if (currentQuestion == 5 && answer == 3)
         {
             feedbackText.text = "Correct!";
             score = score + 1;
@@ -99,7 +99,7 @@ public class ChemQuiz : MonoBehaviour
             feedbackText.text = "Correct!";
             score = score + 1;
         }
-        else if (currentQuestion == 9 && answer == 3)
+        else if (currentQuestion == 9 && answer == 1)
         {
             feedbackText.text = "Correct!";
             score = score + 1;
@@ -109,22 +109,12 @@ public class ChemQuiz : MonoBehaviour
             feedbackText.text = "Correct!";
             score = score + 1;
         }
-        else if (currentQuestion == 11 && answer == 1)
+        else if (currentQuestion == 11 && answer == 3)
         {
             feedbackText.text = "Correct!";
             score = score + 1;
         }
-        else if (currentQuestion == 12 && answer == 3)
-        {
-            feedbackText.text = "Correct!";
-            score = score + 1;
-        }
-        else if (currentQuestion == 13 && answer == 3)
-        {
-            feedbackText.text = "Correct!";
-            score = score + 1;
-        }
-        else if (currentQuestion == 14 && answer == 1)
+        else if (currentQuestion == 12 && answer == 1)
         {
             feedbackText.text = "Correct!";
             score = score + 1;
@@ -137,7 +127,7 @@ public class ChemQuiz : MonoBehaviour
         currentQuestion++;
 
         // Hide the quiz panel after the final question
-        if (currentQuestion > 14)
+        if (currentQuestion > 12)
         {
             gameObject.SetActive(false);
             timer.ToggleTimer();
@@ -148,27 +138,9 @@ public class ChemQuiz : MonoBehaviour
         else
         {
             // Update the question text and answer options for the next question
+
             if (currentQuestion == 2)
             {
-                StartCoroutine(FadeOut());
-
-               prefab1 = Instantiate(prefab1, new Vector3(-3, 2, 5), Quaternion.identity);
-               prefab2 = Instantiate(prefab2, new Vector3(-1, 1, 5), Quaternion.identity);
-               prefab3 = Instantiate(prefab3, new Vector3(1, 3, 5), Quaternion.identity);
-               prefab4 = Instantiate(prefab4, new Vector3(3, 4, 5), Quaternion.identity);
-
-                questionText.text = "Question " + currentQuestion + ": Which of these components is the condenser?";
-                Button1.GetComponentInChildren<TMP_Text>().text = "1";
-                Button2.GetComponentInChildren<TMP_Text>().text = "2";
-                Button3.GetComponentInChildren<TMP_Text>().text = "3";
-                Button4.GetComponentInChildren<TMP_Text>().text = "4";
-            }
-            else if (currentQuestion == 3)
-            {
-                Destroy(prefab1);
-                Destroy(prefab2);
-                Destroy(prefab3);
-                Destroy(prefab4);
 
                 StartCoroutine(FadeOut());
 
@@ -178,7 +150,7 @@ public class ChemQuiz : MonoBehaviour
                 Button3.GetComponentInChildren<TMP_Text>().text = "V4";
                 Button4.GetComponentInChildren<TMP_Text>().text = "V8";
             }
-            else if (currentQuestion == 4)
+            else if (currentQuestion == 1)
             {
                 StartCoroutine(FadeOut());
 
@@ -188,7 +160,7 @@ public class ChemQuiz : MonoBehaviour
                 Button3.GetComponentInChildren<TMP_Text>().text = "50%";
                 Button4.GetComponentInChildren<TMP_Text>().text = "40%";
             }
-            else if (currentQuestion == 5)
+            else if (currentQuestion == 3)
             {
                 StartCoroutine(FadeOut());
 
@@ -200,7 +172,7 @@ public class ChemQuiz : MonoBehaviour
                 imageComponentButton4.enabled = false;
 
             }
-            else if (currentQuestion == 6)
+            else if (currentQuestion == 4)
             {
                 StartCoroutine(FadeOut());
 
@@ -212,7 +184,7 @@ public class ChemQuiz : MonoBehaviour
 
 
             }
-            else if (currentQuestion == 7)
+            else if (currentQuestion == 5)
             {
                 StartCoroutine(FadeOut());
 
@@ -224,7 +196,7 @@ public class ChemQuiz : MonoBehaviour
                 
 
             }
-            else if (currentQuestion == 8)
+            else if (currentQuestion == 6)
             {
                 StartCoroutine(FadeOut());
 
@@ -235,7 +207,7 @@ public class ChemQuiz : MonoBehaviour
                 Button4.GetComponentInChildren<TMP_Text>().text = "";
                
             }
-            else if (currentQuestion == 9)
+            else if (currentQuestion == 7)
             {
                 StartCoroutine(FadeOut());
 
@@ -246,7 +218,7 @@ public class ChemQuiz : MonoBehaviour
                 Button4.GetComponentInChildren<TMP_Text>().text = "";
 
             }
-            else if (currentQuestion == 10)
+            else if (currentQuestion == 8)
             {
                 StartCoroutine(FadeOut());
 
@@ -259,7 +231,7 @@ public class ChemQuiz : MonoBehaviour
                 
 
             }
-            else if (currentQuestion == 11)
+            else if (currentQuestion == 9)
             {
                 StartCoroutine(FadeOut());
 
@@ -271,7 +243,7 @@ public class ChemQuiz : MonoBehaviour
                 imageComponentButton2.enabled = true;
 
             }
-            else if (currentQuestion == 12)
+            else if (currentQuestion == 10)
             {
                 StartCoroutine(FadeOut());
 
@@ -282,7 +254,7 @@ public class ChemQuiz : MonoBehaviour
                 Button4.GetComponentInChildren<TMP_Text>().text = "";
 
             }
-            else if (currentQuestion == 13)
+            else if (currentQuestion == 11)
             {
                 StartCoroutine(FadeOut());
 
@@ -296,37 +268,28 @@ public class ChemQuiz : MonoBehaviour
                 textToChangeSize3.fontSize = 16;
 
             }
-            else if (currentQuestion == 14)
+            else if (currentQuestion == 12)
             {
                 StartCoroutine(FadeOut());
 
                 questionText.text = "Question " + currentQuestion + ": In relation to evaporators what is the steam economy? ";
-                Button1.GetComponentInChildren<TMP_Text>().text = "The steam economy is defined as the ratio between the solvent evaporated and the steam introduced into the system. ";
-                Button2.GetComponentInChildren<TMP_Text>().text = "The steam economy is the amount of steam used in the system. ";
+                Button1.GetComponentInChildren<TMP_Text>().text = "The steam economy is defined as the ratio between the solvent evaporated and the steam introduced into the system.";
+                Button2.GetComponentInChildren<TMP_Text>().text = "The steam economy is the amount of steam used in the system.";
                 Button3.GetComponentInChildren<TMP_Text>().text = "The steam economy is the amount of steam used in the system minus the amount of solvent evaporated. ";
                 Button4.GetComponentInChildren<TMP_Text>().text = "";
                 textToChangeSize1.fontSize = 16;
                 textToChangeSize2.fontSize = 16;
-            }
-            else if (currentQuestion == 1)
-            {
-                Instantiate(prefab1, new Vector3(0, 2, 0), Quaternion.identity);
-                Instantiate(prefab2, new Vector3(0, 1, 0), Quaternion.identity);
-                Instantiate(prefab3, new Vector3(0, 3, 0), Quaternion.identity);
-                Instantiate(prefab4, new Vector3(0, 4, 0), Quaternion.identity);
+                textToChangeSize3.fontSize = 16;
 
-                questionText.text = "Question " + currentQuestion + ": Which piece of safety equipment did we not use?";
-                Button1.GetComponentInChildren<TMP_Text>().text = "1";
-                Button2.GetComponentInChildren<TMP_Text>().text = "2";
-                Button3.GetComponentInChildren<TMP_Text>().text = "3";
-                Button4.GetComponentInChildren<TMP_Text>().text = "4";
             }
+
+
         }
     }
     IEnumerator FadeOut()
     {
         // Calculate the target colour (fully transparent)
-        Color targetColor = new Color(originalColour.r, originalColour.g, originalColour.b, 0.0f);
+        Color targetColor = new Color(originalColour.r, originalColour.g, originalColour.b, 1.0f);
 
         // Lerp the colour from the original colour to the target color over the fade time
         float t = 0.0f;

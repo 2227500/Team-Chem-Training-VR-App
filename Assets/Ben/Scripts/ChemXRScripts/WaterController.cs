@@ -1,3 +1,12 @@
+// /*--------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------
+// Creation Date: 12/05/2023
+// Author: 2239356@swansea.ac.uk
+// Description: ChemXR
+// ----------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------*/
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,10 +17,16 @@ public class WaterController : MonoBehaviour
     public Material waterWobble;
     public Renderer waterWobbleRenderer;
     //public XRKnob waterFlowXRKnob;
-
     public float waterLevel;
+    public HeatExchangerController heatExchanger;  
+    public float myValue;
+    public float increaseRate; // Adjust this value to increase slower or faster
+    public float maxIncrease;
+    public float totalTime; // The total time in seconds to increase the value
 
-    public HeatExchangerController heatExchanger;
+    private float timeElapsed = 0f;
+
+    public bool isWaterCollected;
 
     private void Update()
     {
@@ -20,26 +35,25 @@ public class WaterController : MonoBehaviour
         WaterLevelIncrease();
     }
 
-
+    /// <summary>
+    /// method to change the value of shader fill amount.
+    /// </summary>
+    /// <param name="waterLevel"></param>
     public void WaterLevelChange(float waterLevel)
     {
         waterWobble.SetFloat("_FillAmount", waterLevel);
         //Debug.Log(waterFlowXRKnob.value);
     }
-
-    public float myValue = 0f;
-    public float increaseRate = 0.01f; // Adjust this value to increase slower or faster
-    public float maxIncrease = 1f;
-    public float totalTime = 10f; // The total time in seconds to increase the value
-
-    private float timeElapsed = 0f;
-
     void WaterLevelIncrease()
     {
         if (myValue < maxIncrease && timeElapsed < totalTime)
         {
             myValue += increaseRate;
             timeElapsed += Time.deltaTime;
+        }
+        else
+        {
+            isWaterCollected = true;
         }
     }
 }
