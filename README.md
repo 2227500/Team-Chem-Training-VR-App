@@ -29,7 +29,7 @@ Before entering the laboratory, the user puts on the necessary safety equipment.
 
 ##### **Laboratory Room**
 <p align="justify">
-In the laboratory scene, the user conducts the experiment and observes the outcomes.
+In the laboratory scene, the user conducts the experiment and observes the outcomes. Once the user finishes the process user can do the quiz.
   
 ![alt text](https://github.com/2239356Benadict/Assignment1/blob/main/lab.png)
 
