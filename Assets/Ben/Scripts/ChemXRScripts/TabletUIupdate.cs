@@ -28,8 +28,8 @@ public class TabletUIupdate : MonoBehaviour
 
     private void Update()
     {
-        FullyOpenKnobStatus();
-        PartiallyOpenKnobStatus();
+        //FullyOpenKnobStatus();
+        //PartiallyOpenKnobStatus();
     }
 
 

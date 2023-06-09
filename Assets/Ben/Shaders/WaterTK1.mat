@@ -54,6 +54,6 @@ Material:
     - _WobbleX: 0
     - _WobbleZ: 0
     m_Colors:
-    - _SideColor: {r: 0.0991034, g: 0.1396457, b: 0.20834237, a: 1}
-    - _TopColor: {r: 0.34607512, g: 0.4867217, b: 0.7264151, a: 1}
+    - _SideColor: {r: 0.33802062, g: 0.33862138, b: 0.33962262, a: 0.49019608}
+    - _TopColor: {r: 0.33802062, g: 0.33862138, b: 0.33962262, a: 0.49019608}
   m_BuildTextureStacks: []

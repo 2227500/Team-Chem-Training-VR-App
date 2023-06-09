@@ -6,14 +6,15 @@ using TMPro;
 
 public class HeatExchangerController : MonoBehaviour
 {
-    public float steamFlowRate = 0.0f;
-    public float waterFlowRate = 0.0f;
-    public float steamTemperature = 0.0f; 
-    public float waterTemperatureInE1 = 0.0f; 
-    public float waterTemperatureOutE1 = 0.0f; 
-    public float waterTemperatureOutE2 = 0.0f; 
-    public float waterTemperatureOutE3 = 0.0f; 
+    public float steamFlowRate;
+    public float waterFlowRate;
 
+    public float steamTemperature;
+    public float waterTemperatureInE1; 
+    public float waterTemperatureOutE1; 
+    public float waterTemperatureOutE2; 
+    public float waterTemperatureOutE3;
+    public float _waterTemperatureOutE1;
     public float heatTransferCoefficientE1;
     public float heatTransferCoefficientE2; 
     public float densityWater = 1000.0f; 
@@ -47,7 +48,7 @@ public class HeatExchangerController : MonoBehaviour
         CalculateWaterTemperatureOutE1();
         CalculateWaterTemperatureOutE2();
         CalculateWaterTemperatureOutE3();
-        
+
 
         ControlSteamFlowRate();
         WaterFlowRate();
@@ -57,85 +58,82 @@ public class HeatExchangerController : MonoBehaviour
 
     public void CalculateWaterTemperatureOutE1()
     {
-        
-        float deltaT = steamTemperature - waterTemperatureInE1; // temperature difference between steam and water
-        float q = waterFlowRate * densityWater * specificHeatWater * deltaT; // heat transferred from steam to water
-        float uA = heatTransferCoefficientE1 * 33.3f;  // overall heat transfer coefficient times surface area of E1
-        float deltaTLogMean = 53.6f; // log mean temperature difference for E1
-        waterTemperatureOutE1 = waterTemperatureInE1 + q / (uA * deltaTLogMean); // calculate water temperature at the outlet of E1
-        tI2Value.text = waterTemperatureOutE1.ToString("f2");
+        float deltaT = steamTemperature - waterTemperatureInE1;
+        float Q = waterFlowRate * 2 * densityWater * specificHeatWater * deltaT;
+        Debug.Log(waterFlowRate);
+        heatTransferCoefficientE1 = Q / deltaT;
 
+        float uA = heatTransferCoefficientE1 * 45.3f /100;  // overall heat transfer coefficient times surface area of E1
+
+        float dt1 = steamTemperature - waterTemperatureInE1;
+        float dt2 = waterTemperatureOutE1 - (waterTemperatureOutE1 - 0.01f);
+        float LMTDE1 = ((dt1 - dt2) / Mathf.Log(dt1 / dt2));
+        float deltaTLogMean = LMTDE1; // log mean temperature difference for E1
+        Debug.Log(deltaTLogMean);
+        waterTemperatureOutE1 = 2.5f * waterTemperatureInE1 + Q / (uA * 13.3f);
+        _waterTemperatureOutE1 = 2 * (waterTemperatureInE1 + (Q / (waterFlowRate * specificHeatWater))) / 10000;
+        Debug.Log(_waterTemperatureOutE1);
+        tI2Value.text = _waterTemperatureOutE1.ToString("f2");
+        tI3Value.text = waterTemperatureOutE1.ToString("f2");
+        Debug.Log(waterTemperatureOutE1);
     }
 
     public void CalculateWaterTemperatureOutE2()
     {
         float deltaT = waterTemperatureOutE1; // temperature difference between water at E1 and E2
-        float q = waterFlowRate * densityWater * specificHeatWater * deltaT; // heat transferred from E1 to E2
+        float Q = steamFlowRate * 2.5f * densityWater * specificHeatWater * deltaT; // heat transferred from E1 to E2
+        heatTransferCoefficientE2 = Q / deltaT;
+        Debug.Log(steamFlowRate);
         float uA = heatTransferCoefficientE2 * 33.3f;  // overall heat transfer coefficient times surface area of E2
-        float deltaTLogMean = 53.6f;  // log mean temperature difference for E2
-        waterTemperatureOutE2 = waterTemperatureOutE1 + q / (uA * deltaTLogMean); // calculate water temperature at the outlet of E2
-        tI3Value.text = waterTemperatureOutE2.ToString("f2");
-        
+        float deltaTLogMean = CalculateLogMeanTemperatureDifferenceE2(deltaT);  // log mean temperature difference for E2
+        Debug.Log(deltaTLogMean);
+        //float waterTemperatureInE2 = steamTemperature - (q / (steamFlowRate * specificHeatWater)); 
+        waterTemperatureOutE2 = waterTemperatureOutE1 - Q / (uA * 3.3f); // calculate water temperature at the outlet of E2
+        tI6Value.text = (waterTemperatureOutE2 / 2f).ToString("f2");      
     }
 
     public void CalculateWaterTemperatureOutE3()
     {
-        float deltaT = waterTemperatureOutE1;// - waterTemperatureOutE2; // temperature difference between water at E1 and E2
-        float q = waterFlowRate * densityWater * specificHeatWater * deltaT; // heat transferred from E1 to E2
-        float uA = heatTransferCoefficientE2 * 33.3f;  // overall heat transfer coefficient times surface area of E2
-        float deltaTLogMean = 53.6f;  // log mean temperature difference for E2
-        waterTemperatureOutE3 = waterTemperatureOutE1 + q / (uA * deltaTLogMean); // calculate water temperature at the outlet of E2
-        tI4Value.text = waterTemperatureOutE2.ToString("f2");
+        float deltaT = waterTemperatureInE1;// - waterTemperatureOutE2; // temperature difference between water at E1 and E2
+        float Q = waterFlowRate * densityWater * specificHeatWater * deltaT; // heat transferred from E1 to E2
 
-        Debug.Log("DeltaT3 : " + deltaT);
-        Debug.Log("Heat transferred (q)3: " + q);
-        Debug.Log(heatTransferCoefficientE2);
-        Debug.Log("uA2 : " + uA);
-        Debug.Log("Log mean temperature3: " + deltaTLogMean);
-        Debug.Log("WaterTemperatureOutE3: " + waterTemperatureOutE2);
-        Debug.Log("WaterTemperatureOutE3: " + waterTemperatureOutE1);
+        float uA = heatTransferCoefficientE2 * 13.3f;  // overall heat transfer coefficient times surface area of E2
+        float deltaTLogMean = 1.6f;  // log mean temperature difference for E2
 
+        waterTemperatureOutE3 = _waterTemperatureOutE1 - Q / (uA * deltaTLogMean); // calculate water temperature at the outlet of E2
+        tI4Value.text = (waterTemperatureOutE3 / 2f).ToString("f2");
     }
 
     void ControlSteamFlowRate()
     {
         // Control the steam flow rate.
-        steamFlowRate = steamKnobValue.value;
+        steamFlowRate = steamKnobValue.value *100;
         //Debug.Log("Steam FLow Rate: " + steamFlowRate);
     }
     void WaterFlowRate()
     {
         // Control the steam flow rate.
-        waterFlowRate = waterKnobValue.value;  // get the steam flow rate from the input device
-        //Debug.Log("Steam FLow Rate: " + steamFlowRate);
+        waterFlowRate = waterKnobValue.value * 100;  // get the steam flow rate from the input device
+        //Debug.Log("Steam FLow Rate: " + waterFlowRate);
     }
 
-   
 
-   
-
-    float CalculateSurfaceAreaE1()
-    {      
-        return 33.3f;
-    }
-
-    float CalculateSurfaceAreaE2()
-    {
-        return 33.3f;
-    }
-
-    float CalculateLogMeanTemperatureDifferenceE1(float deltaT)
+    float CalculateLogMeanTemperatureDifferenceE1()
     {
         float dt1 = steamTemperature - waterTemperatureInE1;
-        float dt2 = waterTemperatureOutE1 - waterTemperatureOutE2;
+        float dt2 = waterTemperatureOutE1 - (waterTemperatureOutE1 - 0.01f);
         float LMTDE1 = ((dt1 - dt2) / Mathf.Log(dt1 / dt2));
-        deltaT = LMTDE1;
-        return deltaT;
+        Debug.Log(LMTDE1);
+        return LMTDE1;
     }
 
     float CalculateLogMeanTemperatureDifferenceE2(float deltaT)
     {
-        return 0.0f;
+        float dt1 = waterTemperatureInE1;
+        float dt2 = waterTemperatureOutE1 - waterTemperatureOutE2;
+        float LMTDE2 = ((dt1 - dt2) / Mathf.Log(dt1 / dt2));
+        
+        return LMTDE2;
     }
 
     bool PumpOnOff()
@@ -153,11 +151,11 @@ public class HeatExchangerController : MonoBehaviour
     {
         yield return new WaitForSeconds(10f);
         tI1Value.text = waterTemperatureInE1.ToString("F2");
-        float t15 = waterTemperatureInE1 + Random.Range(-0.2f, 0.6f);
+        float t15 = waterTemperatureInE1 + Random.Range(-2.2f, -1.6f);
         tI5Value.text = t15.ToString("F2");
         
         //steamTemperatureValue.text = steamTemperature.ToString();
-        float t16 = waterTemperatureOutE2 + Random.Range(3f, 6f);
+        float t16 = waterTemperatureOutE2 - Random.Range(3f, 6f);
         tI6Value.text = t16.ToString("F2");
     }
     

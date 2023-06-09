@@ -20,14 +20,19 @@ public class ProcessDoneUI : MonoBehaviour
     public WaterController waterController;
     public ConcentratedLiquidrController concentrated;
     public TK1WaterLevel tKWaterLevel;
+    public StepsCategorisation stepsCategorisation;
+
+    bool _isAllStepsDone;
 
     private void Start()
     {
         processDoneUI.SetActive(false);
+        _isAllStepsDone = stepsCategorisation.startSetupDoneSuccessfully;
+
     }
     public void Update()
     {
-        if (waterController && concentrated && tKWaterLevel)
+        if (waterController && concentrated && tKWaterLevel && _isAllStepsDone)
         {
             processDoneUI.SetActive(true);
         }

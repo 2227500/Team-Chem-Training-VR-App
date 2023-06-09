@@ -38,11 +38,13 @@ public class StepsCategorisation : MonoBehaviour
     public KnobValueForText[] startstepSixteen;
     public KnobValueForText[] startstepSeventeen;
 
+    public GameObject stepFiveButton;
     public GameObject stepSixButton;
     public GameObject stepNineButton;
     public GameObject stepElevenButton;
     public GameObject stepSeventeenButton;
     public GameObject shutDownButton;
+    public GameObject attendQuiz;
 
     public XRLever pumbSwitch1;
     public XRLever pumbSwitch2;
@@ -60,12 +62,14 @@ public class StepsCategorisation : MonoBehaviour
     public GameObject quizPanel;
     private void Start()
     {
+        stepFiveButton.SetActive(false);
         stepSixButton.SetActive(false);
         stepNineButton.SetActive(false);
         stepElevenButton.SetActive(false);
         stepSeventeenButton.SetActive(false);
         startSetupDoneSuccessfully = false;
         quizPanel.SetActive(false);
+        attendQuiz.SetActive(false);
     }
 
     private void Update()
@@ -289,6 +293,7 @@ public class StepsCategorisation : MonoBehaviour
             {
                 startstepFive[i].leverOutlineColor.enabled = true;
             }
+            //stepFiveButton.SetActive(true);
         }
         else
         {
@@ -297,32 +302,46 @@ public class StepsCategorisation : MonoBehaviour
             {
                 startstepFive[i].leverOutlineColor.enabled = false;
             }
+            stepFiveButton.SetActive(false);
         }
-        for (int i = 0; i < startstepFive.Length; i++)
-        {
-            int substepdone = 0;
-            for (int substep = 0; substep < startstepFive.Length; substep++)
-            {
-                if (startstepFive[substep].isDone)
-                {
-                    Debug.Log("Substep five is done" + i);
-                    substepdone++;
+        //for (int i = 0; i < startstepFive.Length; i++)
+        //{
+        //    int substepdone = 0;
+        //    for (int substep = 0; substep < startstepFive.Length; substep++)
+        //    {
+        //        if (startstepFive[substep].isDone)
+        //        {
+        //            Debug.Log("Substep five is done" + i);
+        //            substepdone++;
                     
-                }
+        //        }
 
-                if (substepdone == startstepFive.Length)
-                {
-                    tabletUI.fullyOpenImage[4].color = Color.white;
-                    totalStepsDone = 5;
-                    isStepFiveDOne = true;
-                }
-                else
-                {
-                    tabletUI.fullyOpenImage[4].color = Color.red;
-                    isStepFiveDOne = false;
-                    totalStepsDone = 4;
-                }
-            }
+        //        if (substepdone == startstepFive.Length)
+        //        {
+        //            tabletUI.fullyOpenImage[4].color = Color.white;
+        //            totalStepsDone = 5;
+        //            isStepFiveDOne = true;
+        //        }
+        //        else
+        //        {
+        //            tabletUI.fullyOpenImage[4].color = Color.red;
+        //            isStepFiveDOne = false;
+        //            totalStepsDone = 4;
+        //        }
+        //    }
+        //}
+
+        if (isStepFiveDOne)
+        {
+            tabletUI.fullyOpenImage[4].color = Color.white;
+            totalStepsDone = 5;
+            isStepFiveDOne = true;
+        }
+        else
+        {
+            tabletUI.fullyOpenImage[4].color = Color.red;
+            isStepFiveDOne = false;
+            totalStepsDone = 4;
         }
     }
 
@@ -330,21 +349,22 @@ public class StepsCategorisation : MonoBehaviour
     {
         if (isStepFiveDOne)
         {
-            stepSixButton.SetActive(true);
-            //// Outline is getting enabled
-            //for (int i = 0; i < startstepSix.Length; i++)
-            //{
-            //    startstepSix[i].leverOutlineColor.enabled = true;
-            //}
+            //stepSixButton.SetActive(true);                              // if bitton not appearing uncomment this for all.
+            // Outline is getting enabled
+            for (int i = 0; i < startstepSix.Length; i++)
+            {
+                startstepSix[i].leverOutlineColor.enabled = true;
+            }
+            stepFiveButton.SetActive(false);
         }
         else
         {
-            //stepSixButton.SetActive(false);
-            //// Outline is getting disabled
-            //for (int i = 0; i < startstepSix.Length; i++)
-            //{
-            //    startstepSix[i].leverOutlineColor.enabled = false;
-            //}
+            stepSixButton.SetActive(false);
+            // Outline is getting disabled
+            for (int i = 0; i < startstepSix.Length; i++)
+            {
+                startstepSix[i].leverOutlineColor.enabled = false;
+            }
         }
         //for (int i = 0; i < startstepSix.Length; i++)
         //{
@@ -480,7 +500,8 @@ public class StepsCategorisation : MonoBehaviour
     {
         if (isStepEightDone)
         {
-            stepNineButton.SetActive(true);
+            //stepNineButton.SetActive(true);
+
             //// Outline is getting enabled
             //for (int i = 0; i < startstepNine.Length; i++)
             //{
@@ -582,7 +603,8 @@ public class StepsCategorisation : MonoBehaviour
     {
         if (isStepTenDone)
         {
-            stepElevenButton.SetActive(true);
+            //stepElevenButton.SetActive(true);
+
             //// Outline is getting enabled
             //for (int i = 0; i < startstepEleven.Length; i++)
             //{
@@ -862,53 +884,20 @@ public class StepsCategorisation : MonoBehaviour
     {
         if (isStepSixteenDone)
         {
-            stepSeventeenButton.SetActive(true);
-            //// Outline is getting enabled
-            //for (int i = 0; i < startstepSixteen.Length; i++)
-            //{
-            //    startstepSixteen[i].leverOutlineColor.enabled = true;
-            //}
+            //stepSeventeenButton.SetActive(true);
         }
         else
         {
             stepSeventeenButton.SetActive(false);
-            //// Outline is getting disabled
-            //for (int i = 0; i < startstepSixteen.Length; i++)
-            //{
-            //    startstepSixteen[i].leverOutlineColor.enabled = false;
-            //}
         }
-        //for (int i = 0; i < startstepSixteen.Length; i++)
-        //{
-        //    int substepdone = 0;
-        //    for (int substep = 0; substep < startstepSixteen.Length; substep++)
-        //    {
-        //        if (startstepSixteen[substep].isDone)
-        //        {
-        //            Debug.Log("Substep Nine is done" + i);
-        //            substepdone++;
-        //        }
-
-        //        if (substepdone == startstepSixteen.Length)
-        //        {
-        //            tabletUI.fullyOpenImage[15].color = Color.white;
-        //            totalStepsDone = 17;
-        //            isStepSixteenDone = true;
-        //            stepSeventeenButton.SetActive(false);
-        //        }
-        //        else
-        //        {
-        //            tabletUI.fullyOpenImage[15].color = Color.red;
-        //            isStepSixteenDone = false;
-        //        }
-        //    }
-        //}
 
         if (isStepSeventeenDone)
         {
             tabletUI.fullyOpenImage[16].color = Color.white;
             totalStepsDone = 17;
             isStepSeventeenDone = true;
+            stepSeventeenButton.SetActive(false);
+            attendQuiz.SetActive(true);
         }
         else
         {
@@ -917,6 +906,13 @@ public class StepsCategorisation : MonoBehaviour
             totalStepsDone = 16;
         }
     }
+
+    public void StepFiveDone()
+    {
+        isStepFiveDOne = true;
+        stepFiveButton.SetActive(false);
+    }
+
     public void StepSixDone()
     {
         
@@ -927,29 +923,27 @@ public class StepsCategorisation : MonoBehaviour
     public void StepNineDone()
     {
         isStepNineDone = true;
-        
-
     }
 
     public void StepElevenDone()
     {
-        isStepElevenDone = true;
-        
+        isStepElevenDone = true;   
     }
 
     public void StepSeventeenDone()
     {
         isStepSeventeenDone = true;
-
+        stepSeventeenButton.SetActive(false);
         startSetupDoneSuccessfully = true;
+        attendQuiz.SetActive(true);
     }
-    #endregion //
+
+    #endregion 
 
     //public void ELCB()
     //{
     //    isStepSevenDone = true;
     //    totalStepsDone = 7;
-
     //}
 
     public GameObject startUpCompleted;

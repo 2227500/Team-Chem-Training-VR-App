@@ -28,7 +28,7 @@ public class HandAndMovement : MonoBehaviour
 
     public ActionBasedControllerManager leftHandControllerManager;
     public ActionBasedControllerManager rightHandControllerManager;
-    
+
 
     public void Lefthander()
     {
